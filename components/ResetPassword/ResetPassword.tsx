@@ -69,16 +69,16 @@ const ResetPassword = () => {
     // }, [openInfo]);
 
     return (
-        <Grid container item xs={12} direction="row" justify="center" alignItems="center" className={classes.loginPage}>
+        <Grid container item xs={12} direction="row" justify="center" alignItems="center">
             {/*{openInfo && <DialogPasswordInfo open={openInfo} data={infoDialogData} toggleOpen={setOpenInfo} />}*/}
-            <Grid item xs={12} className={classes.logoImage}>
+            <Grid item xs={12}>
                 <img src={logo} alt="logo" />
             </Grid>
             <Grid
                 container
                 item
                 xs={10}
-                className={classes.loginContainer}
+                // className={classes.loginContainer}
                 direction="row"
                 justify="center"
                 alignItems="center"
@@ -115,12 +115,12 @@ const ResetPassword = () => {
                                         direction="row"
                                         justify="center"
                                         alignItems="center"
-                                        className={classes.loginContainerWrapper}
+                                        // className={classes.loginContainerWrapper}
                                     >
                                         <Grid item lg={4} md={6} sm={8} xs={12}>
                                             <Grid item xs={12}>
                                                 <Typography
-                                                    className={classes.dividerMargin}
+                                                    // className={classes.dividerMargin}
                                                     variant="h6"
                                                     align="center"
                                                 >
@@ -130,7 +130,7 @@ const ResetPassword = () => {
                                             <Grid item xs={12}>
                                                 <Typography
                                                     variant="body2"
-                                                    className={`${classes.colorGrey} ${classes.subTitle}`}
+                                                    // className={`${classes.colorGrey} ${classes.subTitle}`}
                                                     align="center"
                                                 >
                                                     We&#39;ll ask for this password whenever you sign in
@@ -143,17 +143,17 @@ const ResetPassword = () => {
                                                     name="password"
                                                     placeholder="New password"
                                                     component={FormField}
-                                                    endAdornment={
-                                                        <InputAdornment>
-                                                            <VpnKeyIcon
-                                                                className={
-                                                                    formProps.values.password
-                                                                        ? classes.greyDark
-                                                                        : classes.greyLight
-                                                                }
-                                                            />
-                                                        </InputAdornment>
-                                                    }
+                                                    // endAdornment={
+                                                    //     <InputAdornment>
+                                                    //         <VpnKeyIcon
+                                                    //             className={
+                                                    //                 formProps.values.password
+                                                    //                     ? classes.greyDark
+                                                    //                     : classes.greyLight
+                                                    //             }
+                                                    //         />
+                                                    //     </InputAdornment>
+                                                    // }
                                                 />
                                             </Grid>
                                             <Grid item xs={12}>
@@ -163,17 +163,17 @@ const ResetPassword = () => {
                                                     name="verifyPassword"
                                                     placeholder="Re-enter password"
                                                     component={FormField}
-                                                    endAdornment={
-                                                        <InputAdornment>
-                                                            <VpnKeyIcon
-                                                                className={
-                                                                    formProps.values.verifyPassword
-                                                                        ? classes.greyDark
-                                                                        : classes.greyLight
-                                                                }
-                                                            />
-                                                        </InputAdornment>
-                                                    }
+                                                    // endAdornment={
+                                                    //     <InputAdornment>
+                                                    //         <VpnKeyIcon
+                                                    //             className={
+                                                    //                 formProps.values.verifyPassword
+                                                    //                     ? classes.greyDark
+                                                    //                     : classes.greyLight
+                                                    //             }
+                                                    //         />
+                                                    //     </InputAdornment>
+                                                    // }
                                                 />
                                             </Grid>
                                             <Grid item xs={12}>
@@ -181,7 +181,7 @@ const ResetPassword = () => {
                                                     fullWidth
                                                     size="medium"
                                                     variant="contained"
-                                                    className={`${classes.loginButton} ${classes.buttonMargin}`}
+                                                    // className={`${classes.loginButton} ${classes.buttonMargin}`}
                                                     type="submit"
                                                     disabled={!isValidButton}
                                                 >
@@ -190,31 +190,43 @@ const ResetPassword = () => {
                                             </Grid>
                                         </Grid>
                                         <Grid item xs={11} container justify="space-between" spacing={10}>
-                                            <Grid item xs={3} className={`${classes.advice} ${classes.charactersImg}`}>
+                                            <Grid
+                                                item
+                                                xs={3}
+                                                // className={`${classes.advice} ${classes.charactersImg}`}
+                                            >
                                                 <Typography
                                                     align="center"
                                                     variant="body2"
-                                                    className={classes.colorGrey}
+                                                    // className={classes.colorGrey}
                                                 >
                                                     Use at least 8 characters, a combination of numbers and letters is
                                                     best
                                                 </Typography>
                                             </Grid>
-                                            <Grid item xs={5} className={`${classes.advice} ${classes.notUsePersonal}`}>
+                                            <Grid
+                                                item
+                                                xs={5}
+                                                // className={`${classes.advice} ${classes.notUsePersonal}`}
+                                            >
                                                 <Typography
                                                     align="center"
                                                     variant="body2"
-                                                    className={classes.colorGrey}
+                                                    // className={classes.colorGrey}
                                                 >
                                                     Do not use dictionary words, your name, e-mail address, mobile phone
                                                     or other personal information that can be easily obtained.
                                                 </Typography>
                                             </Grid>
-                                            <Grid item xs={3} className={`${classes.advice} ${classes.notMultiple}`}>
+                                            <Grid
+                                                item
+                                                xs={3}
+                                                // className={`${classes.advice} ${classes.notMultiple}`}
+                                            >
                                                 <Typography
                                                     align="center"
                                                     variant="body2"
-                                                    className={classes.colorGrey}
+                                                    // className={classes.colorGrey}
                                                 >
                                                     Do not use tha same password for multiple online accounts.
                                                 </Typography>
