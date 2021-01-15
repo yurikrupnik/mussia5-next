@@ -1,3 +1,4 @@
+import React from "react";
 import Head from "next/head";
 import Button from "@material-ui/core/Button";
 import styles from "../styles/Home.module.css";
@@ -7,17 +8,19 @@ export default function Home() {
         <div className={styles.container}>
             <Head>
                 <title>Create Next App</title>
-                <link rel="icon" href="/favicon.ico" />
+                {/*<link rel="icon" href="/favicon.ico" />*/}
             </Head>
 
             <main className={styles.main}>
                 <Button color="primary">Aros</Button>
                 <h1 className={styles.title}>
-                    Welcome to <a href="https://nextjs.org">Next.js!</a>
+                    Welcome to
+                    <a href="https://nextjs.org">Next.js!</a>
                 </h1>
 
                 <p className={styles.description}>
-                    Get started by editing <code className={styles.code}>pages/index.js</code>
+                    Get started by editing
+                    <code className={styles.code}>pages/index.js</code>
                 </p>
 
                 <div className={styles.grid}>
@@ -52,7 +55,8 @@ export default function Home() {
                     target="_blank"
                     rel="noopener noreferrer"
                 >
-                    Powered by <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
+                    Powered by
+                    <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
                 </a>
             </footer>
         </div>

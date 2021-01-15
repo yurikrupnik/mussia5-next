@@ -1,5 +1,6 @@
 import React from "react";
 
+// eslint-disable-next-line
 const Main = () => {
     return <div>Main</div>;
 };

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 // import axios from "axios";
 // import Head from "next/head";
-import Link from "next/link";
+// import Link from "next/link";
 import Button from "@material-ui/core/Button";
 import Container from "@material-ui/core/Container";
 import { useRouter } from "next/router";
@@ -60,9 +60,9 @@ const LoginPage = () => {
                     <input id="password" type="password" name="password" placeholder="Password" />
                 </label>
                 <Button type="submit">Sign in</Button>
-                <Link href="/forget-password">
-                    <a>Forget password</a>
-                </Link>
+                {/*<Link href="/forget-password">*/}
+                {/*    <a>Forget password</a>*/}
+                {/*</Link>*/}
             </form>
         </Container>
     );

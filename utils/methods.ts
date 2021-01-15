@@ -1,4 +1,3 @@
-import { Request, Response } from "express";
 import { NextApiRequest, NextApiResponse } from "next";
 
 import mongoose from "mongoose";
@@ -38,13 +37,13 @@ const find = (Model: any) => (req: NextApiRequest, res: NextApiResponse) => {
     Model.findOne({ _id: req.query.id }).then(respondWithResult(res)).catch(handleError(res));
 };
 
-const removeOne = (Model: mongoose.Model<any>) => (req: Request, res: Response) =>
+const removeOne = (Model: mongoose.Model<any>) => (req: NextApiRequest, res: NextApiResponse) =>
     Model.findByIdAndDelete(req.query.id).then(responseId(req, res)).catch(handleError(res));
 
-const create = (Model: mongoose.Model<any>) => (req: Request, res: Response) =>
+const create = (Model: mongoose.Model<any>) => (req: NextApiRequest, res: NextApiResponse) =>
     Model.create(req.body).then(respondWithResult(res)).catch(handleError(res));
 
-const update = (Model: mongoose.Model<any>) => (req: Request, res: Response) =>
+const update = (Model: mongoose.Model<any>) => (req: NextApiRequest, res: NextApiResponse) =>
     Model.findOneAndUpdate(
         {
             _id: req.body._id, // eslint-disable-line no-underscore-dangle
