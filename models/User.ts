@@ -4,7 +4,7 @@ import mongoose, { Schema, Document, Model as Mo } from "mongoose";
 const dbModel = "user";
 
 type UserGroupFront = {
-  name: string;
+    name: string;
 };
 
 type UserGroup = UserGroupFront;
@@ -12,9 +12,9 @@ type UserGroup = UserGroupFront;
 type UserGroupDocument = UserGroup & Document;
 
 const userGroupSchemaObj: Record<keyof UserGroup, any> = {
-  name: {
-    type: String,
-  },
+    name: {
+        type: String,
+    },
 };
 
 // if (process.env.IS_OFFLINE) {
@@ -25,27 +25,24 @@ const UsersSchema: Schema = new Schema(userGroupSchemaObj);
 
 type UserGroupModel = Mo<UserGroupDocument>;
 
-const Model: UserGroupModel = mongoose.model<UserGroupDocument>(
-  dbModel,
-  UsersSchema
-);
+const Model: UserGroupModel = mongoose.model<UserGroupDocument>(dbModel, UsersSchema);
 
 const mock: UserGroupFront[] = [
-  {
-    name: "Group 1",
-  },
-  {
-    name: "Group 2",
-  },
-  {
-    name: "Group 3",
-  },
-  {
-    name: "Group 4",
-  },
-  {
-    name: "Group 5",
-  },
+    {
+        name: "Group 1",
+    },
+    {
+        name: "Group 2",
+    },
+    {
+        name: "Group 3",
+    },
+    {
+        name: "Group 4",
+    },
+    {
+        name: "Group 5",
+    },
 ];
 
 export default Model;

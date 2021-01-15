@@ -1,36 +1,35 @@
 import "../styles/globals.css";
 import { AppProps } from "next/app";
 import React from "react";
-import { ThemeProvider, createMuiTheme } from "@material-ui/core/styles";
-import { useRouter } from "next/router";
+import Head from "next/head";
+import { ThemeProvider } from "@material-ui/core/styles";
+// import { useRouter } from "next/router";
+import CssBaseline from "@material-ui/core/CssBaseline";
+import theme from "../src/theme";
+// import theme1 from "../src/themes1";
 
-const theme = createMuiTheme({
-    palette: {
-        primary: {
-            main: "#6c7bd0",
-        },
-    },
-});
-
-const theme1 = createMuiTheme({
-    palette: {
-        primary: {
-            main: "#8ad06c",
-        },
-    },
-});
-
+// eslint-disable-next-line
 const MyApp = ({ Component, pageProps }: AppProps) => {
-    // console.log("pageProps", pageProps);
-    // console.log("Component", Component);
-    // return React.createElement(Component, pageProps);
-    const router = useRouter();
-    console.log("router", router);
+    // const router = useRouter();
+    // React.useEffect(() => {
+    //     // Remove the server-side injected CSS.
+    //     const jssStyles = document.querySelector("#jss-server-side");
+    //     if (jssStyles) {
+    //         jssStyles.parentElement.removeChild(jssStyles);
+    //     }
+    // }, []);
     return (
-        <ThemeProvider theme={router.pathname === "/dashboard" ? theme1 : theme}>
-            {/* eslint-disable-next-line */}
-            <Component {...pageProps} />
-        </ThemeProvider>
+        <>
+            <Head>
+                <title>My page</title>
+                <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width" />
+            </Head>
+            <ThemeProvider theme={theme}>
+                <CssBaseline />
+                {/* eslint-disable-next-line */}
+                <Component {...pageProps} />
+            </ThemeProvider>
+        </>
     );
 };
 
