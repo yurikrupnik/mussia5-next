@@ -3,7 +3,7 @@ import { SimplePaletteColorOptions, Theme as DefaultTheme } from "@material-ui/c
 import { CommonColors, PaletteOptions } from "@material-ui/core/styles/createPalette";
 import { TypographyOptions } from "@material-ui/core/styles/createTypography";
 
-export type Theme = Omit<DefaultTheme, "palette" | "typography"> & {
+type Theme = Omit<DefaultTheme, "palette" | "typography"> & {
     palette: PaletteOptions & {
         common: Partial<CommonColors> & {
             black10: string;
@@ -253,3 +253,5 @@ const theme: Partial<Theme> = {
 };
 
 export default createMuiTheme(theme);
+
+export type { Theme };

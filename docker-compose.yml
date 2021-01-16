@@ -1,0 +1,30 @@
+version: '3'
+services:
+    db:
+        image: mongo
+        ports:
+            - 27017:27017
+    web:
+        image: rt-react
+        build:
+            context: .
+            dockerfile: ./Dockerfile.dev
+        container_name: web
+        environment:
+            - NODE_ENV_DOCKER=true
+            - DB_USER=admin
+# dev db
+            - DB_PASSWORD=elmtmVSesRtpz3de
+            - DATABASE_URL=@cluster0.xliif.gcp.mongodb.net/
+# local db
+#            - DATABASE_URL=mongodb://db/rt-react
+        ports:
+            - 4000:4000
+            - 4001:4001
+            - 7000:7000
+            - 7070:7070
+        volumes:
+            - ./src:/usr/app/src
+        command: npm run start
+#        depends_on:
+#            - db

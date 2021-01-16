@@ -6,6 +6,7 @@ import Grid from "@material-ui/core/Grid";
 
 import { makeStyles } from "@material-ui/core/styles";
 
+import { NextPageContext } from "next";
 // const theme = createMuiTheme({
 //     palette: {
 //         primary: {
@@ -84,6 +85,24 @@ const Dashbord = () => {
         </Grid>
     );
 };
+
+// Dashbord.getServerSideProps = (ctx: NextPageContext) => {
+//     console.log("getServerSideProps ctx", ctx.req?.headers);
+//     // console.log("ctx", ctx);
+//     return { props: {} };
+// };
+
+Dashbord.getInitialProps = (ctx: NextPageContext) => {
+    console.log("getInitialProps ctx", ctx.req?.headers);
+    // console.log("ctx", ctx);
+    return { props: {} };
+};
+
+// Dashbord.getStaticProps = (ctx: NextPageContext) => {
+//     console.log("getStaticProps ctx", ctx.req?.headers);
+//     // console.log("ctx", ctx);
+//     return { props: {} };
+// };
 
 Dashbord.propTypes = {};
 
