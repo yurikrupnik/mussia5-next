@@ -4,9 +4,9 @@ import Grid from "@material-ui/core/Grid";
 import Container from "@material-ui/core/Container";
 import Typography from "@material-ui/core/Typography";
 import { NextPageContext } from "next";
-import kebabCase from "lodash/kebabCase";
-import { useRouter } from "next/router";
-import json from "../../systems.json";
+// import kebabCase from "lodash/kebabCase";
+// import { useRouter } from "next/router";
+// import json from "../../systems.json";
 
 interface Data {
     name: string;
@@ -30,10 +30,10 @@ interface ItemProps {
 
 const Row = (props: ItemProps) => {
     const { item } = props;
-    const router = useRouter();
+    // const router = useRouter();
 
     const handleClick = useCallback(() => {
-        router.push(`/dashboard/analytics/${kebabCase(item.type.name)}`);
+        // router.push(`/dashboard/analytics/${kebabCase(item.type.name)}`);
     }, [item]);
 
     return (
@@ -95,7 +95,7 @@ const Dashboard = (props: Props) => {
     return (
         <Container>
             <Typography align="center" variant="h5">
-                Systems
+                Dashboard
             </Typography>
             <List data={data} />
         </Container>
@@ -105,25 +105,25 @@ const Dashboard = (props: Props) => {
 // eslint-disable-next-line
 export async function getStaticProps(ctx: NextPageContext) {
     // todo fetch the data async with fetch and set in to the props
-    const formattedData = json.data.map((v) => {
-        const { name, type, site, children, id } = v;
-        return {
-            name,
-            type,
-            site,
-            children: Array.isArray(children)
-                ? children.map((item) => ({
-                      id: item.id,
-                      type: item.type,
-                      site: item.site,
-                      children: item.children || [],
-                      name: item.name,
-                  }))
-                : [],
-            id,
-        };
-    });
-    return { props: { data: formattedData } };
+    // const formattedData = json.data.map((v) => {
+    //     const { name, type, site, children, id } = v;
+    //     return {
+    //         name,
+    //         type,
+    //         site,
+    //         children: Array.isArray(children)
+    //             ? children.map((item) => ({
+    //                   id: item.id,
+    //                   type: item.type,
+    //                   site: item.site,
+    //                   children: item.children || [],
+    //                   name: item.name,
+    //               }))
+    //             : [],
+    //         id,
+    //     };
+    // });
+    return { props: { data: [] } };
 }
 
 Dashboard.propTypes = {};
