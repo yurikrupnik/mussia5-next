@@ -1,7 +1,7 @@
 import React, { useCallback, useState } from "react";
 import { Formik, Form } from "formik";
 // import { useToggle } from "react-use";
-import { useSession, signin, signout } from "next-auth/client";
+import { useSession, signin } from "next-auth/client";
 import Button from "@material-ui/core/Button";
 import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
@@ -301,6 +301,7 @@ const Login = () => {
                                             {/*    {loading && <SpinnerPlatform />}*/}
                                             {/*</Grid>*/}
                                         </Grid>
+                                        <Button onClick={() => signin("google")}>signin google</Button>
                                         <a href="/api/auth/google">
                                             <Button>Google</Button>
                                         </a>

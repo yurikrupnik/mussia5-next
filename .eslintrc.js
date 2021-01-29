@@ -1,8 +1,11 @@
 module.exports = {
     parser: "@typescript-eslint/parser",
-    plugins: ["@typescript-eslint", "react-hooks", "react"],
+    plugins: ["@typescript-eslint", "eslint-plugin-tsdoc", "react-hooks", "react"],
 
     rules: {
+        "tsdoc/syntax": "warn",
+        "react/jsx-one-expression-per-line": 0,
+        "import/no-unresolved": ["error", { ignore: ["^@"] }], // added for next.js paths from tsconfig.json
         "operator-linebreak": "warn",
         "no-use-before-define": ["off", 2, ["React"]],
         "react/jsx-wrap-multilines": 0,
@@ -40,7 +43,7 @@ module.exports = {
         {
             files: ["*.tsx", "*.ts"],
             rules: {
-                "no-undef": 1,
+                // "no-undef": 1,
                 "react/prop-types": "off",
             },
         },
@@ -56,6 +59,7 @@ module.exports = {
             version: "detect",
         },
         "import/resolver": {
+            // typescript: './tsconfig.json',
             node: {
                 // paths: [".", "src", "components"],
                 extensions: [".js", ".jsx", ".ts", ".tsx"],

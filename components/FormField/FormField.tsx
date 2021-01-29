@@ -3,7 +3,7 @@ import { useField } from "formik";
 import FormControl from "@material-ui/core/FormControl";
 import TextField from "@material-ui/core/TextField";
 import MenuItem from "@material-ui/core/MenuItem";
-// import { options as dropDownOptions } from "../../types";
+import { DropDownOptions } from "../../src/types";
 // import { dropDownOptions } from "../../next-env";
 
 interface Props {
@@ -15,7 +15,7 @@ interface Props {
     type?: string;
     label?: string;
     rows?: number;
-    options?: dropDownOptions;
+    options?: DropDownOptions;
     onChange?: () => void;
     handleChangeCallback?: () => void;
     MenuOption?: React.ReactElement;
@@ -29,7 +29,6 @@ interface Props {
 
 const FormField: React.FC<Props> = (props) => {
     const {
-        // eslint-disable-next-line @typescript-eslint/no-unused-vars
         style = {},
         disabled = false,
         fullWidth = false,
