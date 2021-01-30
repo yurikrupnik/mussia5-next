@@ -22,6 +22,7 @@ type UserGroupFront = {
     isActive?: boolean;
     creditCardNumber?: string;
     provider: "local" | "google";
+    // aris?: string;
 };
 
 type UserGroup = UserGroupFront;
@@ -44,6 +45,10 @@ const userGroupSchemaObj: Record<keyof UserGroup, SchemaTypeOptions<any>> = {
         //     return null;
         // },
     },
+    // aris: {
+    //     type: String,
+    //     default: "aris",
+    // },
     provider: {
         type: String,
         enum: ["local", "google"],

@@ -1,7 +1,7 @@
 // import express from "express";
-import passport from "passport";
+// import passport from "passport";
 import nc from "next-connect";
-import { NextApiRequest, NextApiResponse } from "next";
+// import { NextApiRequest, NextApiResponse } from "next";
 // import morgan from "morgan";
 
 // import { login, logout, register } from "./config";
@@ -11,23 +11,23 @@ import all from "../../../middlewares/all";
 
 const handler = nc().use(all);
 
-handler.post(passport.authenticate("local"), (req, res) => {
-    // res.redirect("/dashboard");
-    // console.log("local auth req.user", req.user);
-    // console.log("session", req.session);
-    res.statusCode = 200;
-    res.end();
-    // res.json({ aris: true });
-    // res.send("ok");
-    //                             // req.login(result, (error) => {
-    //                             //     if (error) {
-    //                             //         throw error;
-    //                             //     } else {
-    //                             //         // res.status(200).send(user);
-    //                             res.redirect("/onboarding/step3");
-    //                             //     }
-    //                             // });
-});
+// handler.post(passport.authenticate("local"), (req, res) => {
+//     // res.redirect("/dashboard");
+//     // console.log("local auth req.user", req.user);
+//     // console.log("session", req.session);
+//     res.statusCode = 200;
+//     res.end();
+//     // res.json({ aris: true });
+//     // res.send("ok");
+//     //                             // req.login(result, (error) => {
+//     //                             //     if (error) {
+//     //                             //         throw error;
+//     //                             //     } else {
+//     //                             //         // res.status(200).send(user);
+//     //                             res.redirect("/onboarding/step3");
+//     //                             //     }
+//     //                             // });
+// });
 // handler.post(
 //     passport.authenticate("local", { failWithError: true }),
 //     (req: NextApiRequest, res: NextApiResponse) => {
@@ -101,19 +101,19 @@ handler.post(passport.authenticate("local"), (req, res) => {
 //     });
 // });
 
-handler.delete((req: NextApiRequest, res: NextApiResponse, next) => {
-    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-    // @ts-ignore
-    req.session.destroy((err) => {
-        if (err) {
-            next(err);
-        } else {
-            res.redirect("/");
-        }
-    });
-    // todo check with
-    // req.logOut();
-    // res.status(200).send("logout");
-});
+// handler.delete((req: NextApiRequest, res: NextApiResponse, next) => {
+//     // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+//     // @ts-ignore
+//     req.session.destroy((err) => {
+//         if (err) {
+//             next(err);
+//         } else {
+//             res.redirect("/");
+//         }
+//     });
+//     // todo check with
+//     // req.logOut();
+//     // res.status(200).send("logout");
+// });
 
 export default handler;

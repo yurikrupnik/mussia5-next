@@ -1,7 +1,7 @@
 import React, { useCallback, useState } from "react";
 import { Formik, Form } from "formik";
 // import { useToggle } from "react-use";
-import { useSession, signin } from "next-auth/client";
+import { useSession, signin, signOut } from "next-auth/client";
 import Button from "@material-ui/core/Button";
 import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
@@ -42,7 +42,7 @@ const Login = () => {
     // console.log("loading", loading);
 
     const { data, mutate } = useSWR("/api/users", fetcher);
-    console.log("{ data, mutate }", { data, mutate });
+    console.log("{ data, mutate }", { data, mutate }); // eslint-disable-line
     // const classes = loginStyles();
     // const [shouldRender, setShouldRender] = useState(false);
     const router = useRouter();
@@ -171,13 +171,14 @@ const Login = () => {
                                                 // className={classes.dividerMargin}
                                                 variant="h6"
                                                 onClick={() => {
-                                                    fetch("/api/auth", {
-                                                        method: "DELETE",
-                                                        headers: { "Content-Type": "application/json" },
-                                                        // body: JSON.stringify(values),
-                                                    }).then((r) => {
-                                                        console.log("r", r);
-                                                    });
+                                                    signOut();
+                                                    // fetch("/api/auth", {
+                                                    //     method: "DELETE",
+                                                    //     headers: { "Content-Type": "application/json" },
+                                                    //     // body: JSON.stringify(values),
+                                                    // }).then((r) => {
+                                                    //     console.log("r", r);
+                                                    // });
                                                 }}
                                                 align="center"
                                             >
