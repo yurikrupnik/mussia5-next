@@ -4,16 +4,12 @@ import { validatePassword } from "./crypt";
 
 import UserM, { UserGroupDocument } from "../../models/User";
 
-const serialize = (user: UserGroupDocument, done: (a: null | Error, ad: UserGroupDocument) => void) =>
-    done(null, user._id);
+const serialize = (user: any, done: any) => done(null, user._id);
 
-const deserialize = (_id: string, done: () => void) => UserM.findOne({ _id }, done);
+const deserialize = (_id: string, done: any) => UserM.findOne({ _id }, done);
 
-const checkValidUser = (
-    user: UserGroupDocument,
-    done: (err: Error | null, us: UserGroupDocument | boolean, m?: string) => void
-) => (valid: boolean) => {
-    console.log(">>>>>>>>>>>>>valid", valid);
+const checkValidUser = (user: any, done: any) => (valid: boolean) => {
+    console.log(">>>>>>>>>>>>>valid", valid); // eslint-disable-line
     if (!valid) {
         done(null, false, "huuu"); // todo check it
         // done({ message: "Not valid email or psssword", status: "500" }, false, "huuu"); // todo check it
@@ -51,7 +47,7 @@ const checkUserByEmailAndPass = (email: string, password: string, done: any) => 
         return newUser
             .save()
             .then((result) => {
-                console.log("result", result);
+                console.log("result", result); // eslint-disable-line
                 done(null, result);
                 // req.login(result, (err, s) => {
                 //     if (err) {
