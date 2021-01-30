@@ -114,14 +114,14 @@ const Login = () => {
                     //     return errors;
                     // }}
                     onSubmit={(values) => {
-                        console.log("values", values);
+                        // console.log ("values", values);
                         // setLoading(true);
                         fetch("/api/auth", {
                             method: "POST",
                             headers: { "Content-Type": "application/json" },
                             body: JSON.stringify(values),
-                        }).then((r) => {
-                            console.log("r", r);
+                        }).then(() => {
+                            // console.log("r", r);
                             router.push("/dashboard");
                         });
                         // auth.login({
