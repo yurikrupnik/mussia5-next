@@ -76,15 +76,7 @@ const ResetPassword = () => {
             <Grid item xs={12}>
                 <img src={logo} alt="logo" />
             </Grid>
-            <Grid
-                container
-                item
-                xs={10}
-                // className={classes.loginContainer}
-                direction="row"
-                justify="center"
-                alignItems="center"
-            >
+            <Grid container item xs={10} direction="row" justify="center" alignItems="center">
                 <Formik
                     initialValues={{
                         password: "",
