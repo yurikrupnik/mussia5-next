@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Fragment } from "react";
 import { makeStyles, Theme } from "@material-ui/core/styles";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
@@ -177,7 +177,7 @@ export default function PrimarySearchAppBar() {
     );
 
     return (
-        <>
+        <div>
             <AppBar position="static">
                 <Toolbar>
                     <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="open drawer">
@@ -240,6 +240,6 @@ export default function PrimarySearchAppBar() {
 
             {renderMobileMenu}
             {renderMenu}
-        </>
+        </div>
     );
 }
