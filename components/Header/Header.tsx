@@ -1,5 +1,5 @@
 import React from "react";
-import { makeStyles } from "@material-ui/core/styles";
+import { makeStyles, Theme } from "@material-ui/core/styles";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import IconButton from "@material-ui/core/IconButton";
@@ -22,11 +22,12 @@ import AccountCircle from "@material-ui/icons/AccountCircle";
 import MailIcon from "@material-ui/icons/Mail";
 import NotificationsIcon from "@material-ui/icons/Notifications";
 import MoreIcon from "@material-ui/icons/MoreVert";
+
 // import { useSession } from "next-auth/client";
 
 const drawerWidth = 240;
 
-const useStyles = makeStyles((theme) => ({
+const selectors = (theme: Theme) => ({
     root: {
         display: "flex",
     },
@@ -57,7 +58,9 @@ const useStyles = makeStyles((theme) => ({
         // flexGrow: 1,
         // padding: theme.spacing(3),
     },
-}));
+});
+
+const useStyles = makeStyles(selectors);
 
 export default function PrimarySearchAppBar() {
     // const [session] = useSession();
