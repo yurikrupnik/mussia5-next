@@ -1,4 +1,4 @@
-import React, { useCallback, memo, useMemo } from "react";
+import React, { useCallback, memo } from "react";
 import { useField } from "formik";
 import FormControl from "@material-ui/core/FormControl";
 import TextField from "@material-ui/core/TextField";
@@ -77,7 +77,7 @@ const FormField: React.FC<Props> = (props) => {
                     select
                     value={value}
                 >
-                    {myP}
+                    {options.map(myP)}
                 </TextField>
             </FormControl>
         );
