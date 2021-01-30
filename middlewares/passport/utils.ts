@@ -34,7 +34,7 @@ const checkValidUser = (user: UserGroupDocument, done: any) => (valid: boolean) 
 
 // const saveUser = (done: any) => (user: any) => user.save(done);
 
-const checkUserByEmailAndPass = (req: any, email: string, password: string, done: any) => (user: any) => {
+const checkUserByEmailAndPass = (email: string, password: string, done: any) => (user: any) => {
     if (!user) {
         const newUser = new UserM({
             email,
