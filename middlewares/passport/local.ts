@@ -1,10 +1,12 @@
-import LocalStrategy from 'passport-local';
-import { localStrategyHandler } from './utils';
+import LocalStrategy from "passport-local";
+import { localStrategyHandler } from "./utils";
+
+const SS = "password";
 
 const params = {
-    usernameField: 'email',
-    passwordField: 'password',
-    passReqToCallback: true
+    usernameField: "email",
+    passwordField: SS,
+    passReqToCallback: true,
 };
 
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
