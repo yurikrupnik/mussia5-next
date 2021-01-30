@@ -3,12 +3,12 @@ import { render, cleanup } from "@testing-library/react";
 import { Form, Formik } from "formik";
 import FormField from "../index";
 
-const { it, afterEach } = global;
+// const { it, afterEach } = global;
 
 afterEach(cleanup);
 
 it(`should  component`, () => {
-    expect(1).toBe(1);
+    // expect(1).toBe(1);
     // render(<Component  />);
     render(
         <Formik onSubmit={jest.fn()} initialValues={{ aris: "" }}>
