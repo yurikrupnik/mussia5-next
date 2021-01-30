@@ -18,8 +18,8 @@ const MyApp = ({ Component, pageProps }: AppProps) => (
             <ThemeProvider theme={theme}>
                 <CssBaseline />
                 {/*<header>jeader jere</header>*/}
-                {/* eslint-disable-next-line */}
                 <Header />
+                {/* eslint-disable-next-line */}
                 <Component {...pageProps} />
             </ThemeProvider>
         </Provider>
