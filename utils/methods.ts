@@ -1,6 +1,6 @@
 import { NextApiRequest, NextApiResponse } from "next";
 
-import mongoose, { Document } from "mongoose";
+import mongoose from "mongoose";
 
 const responseId = (req: NextApiRequest, res: NextApiResponse) => {
     const { id } = req.query;
@@ -28,7 +28,7 @@ function respondWithResult<T>(res: NextApiResponse) {
     };
 }
 
-const list = <T extends mongoose.Model<Document>>(Model: T) => (req: NextApiRequest, res: NextApiResponse) => {
+const list = <T extends mongoose.Model<any>>(Model: T) => (req: NextApiRequest, res: NextApiResponse) => {
     Model.find(req.query).then(respondWithResult(res)).catch(handleError(res));
 };
 
@@ -37,13 +37,13 @@ const find = (Model: any) => (req: NextApiRequest, res: NextApiResponse) => {
     Model.findOne({ _id: req.query.id }).then(respondWithResult(res)).catch(handleError(res));
 };
 
-const removeOne = (Model: mongoose.Model<Document>) => (req: NextApiRequest, res: NextApiResponse) =>
+const removeOne = (Model: mongoose.Model<any>) => (req: NextApiRequest, res: NextApiResponse) =>
     Model.findByIdAndDelete(req.query.id).then(responseId(req, res)).catch(handleError(res));
 
-const create = (Model: mongoose.Model<Document>) => (req: NextApiRequest, res: NextApiResponse) =>
+const create = (Model: mongoose.Model<any>) => (req: NextApiRequest, res: NextApiResponse) =>
     Model.create(req.body).then(respondWithResult(res)).catch(handleError(res));
 
-const update = (Model: mongoose.Model<Document>) => (req: NextApiRequest, res: NextApiResponse) =>
+const update = (Model: mongoose.Model<any>) => (req: NextApiRequest, res: NextApiResponse) =>
     Model.findOneAndUpdate(
         {
             _id: req.body._id, // eslint-disable-line no-underscore-dangle
