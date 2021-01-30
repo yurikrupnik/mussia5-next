@@ -1,6 +1,7 @@
 [![DeepSource](https://deepsource.io/gh/yurikrupnik/mussia5-next.svg/?label=active+issues&show_trend=true)](https://deepsource.io/gh/yurikrupnik/mussia5-next/?ref=repository-badge)
 [![DeepSource](https://deepsource.io/gh/yurikrupnik/mussia5-next.svg/?label=resolved+issues&show_trend=true)](https://deepsource.io/gh/yurikrupnik/mussia5-next/?ref=repository-badge)
 [![DeepScan grade](https://deepscan.io/api/teams/12695/projects/15729/branches/318942/badge/grade.svg)](https://deepscan.io/dashboard#view=project&tid=12695&pid=15729&bid=318942)
+[![codecov](https://codecov.io/gh/yurikrupnik/mussia5-next/branch/main/graph/badge.svg?token=HE275XMUUJ)](https://codecov.io/gh/yurikrupnik/mussia5-next)
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
