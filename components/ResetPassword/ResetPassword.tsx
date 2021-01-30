@@ -5,12 +5,13 @@ import * as Yup from "yup";
 import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
 import Button from "@material-ui/core/Button";
-import InputAdornment from "@material-ui/core/InputAdornment";
-import VpnKeyIcon from "@material-ui/icons/VpnKey";
+// import InputAdornment from "@material-ui/core/InputAdornment";
+// import VpnKeyIcon from "@material-ui/icons/VpnKey";
 
 // import { useToggle } from "react-use";
 
-import styles from "./resetPasswordStyles";
+// import styles from "./resetPasswordStyles";
+
 import FormField from "../FormField";
 // import DialogPasswordInfo from "../../components/uiComponents/DialogPasswordInfo";
 // import { Context } from "../../api/auth/context";
@@ -26,13 +27,14 @@ const validationSchema = Yup.object().shape({
 });
 
 const ResetPassword = () => {
-    const classes = styles();
+    // const classes = styles();
     // const { match } = props;
     // const { params } = match;
     // const { token } = params;
     // const auth = useContext(Context);
     // const [openInfo, setOpenInfo] = useToggle(false);
 
+    console.log("a"); // eslint-disable-line
     // const [infoDialogData, setInfoDialogData] = useState({});
     //
     // // eslint-disable-next-line no-unused-vars
@@ -74,22 +76,14 @@ const ResetPassword = () => {
             <Grid item xs={12}>
                 <img src={logo} alt="logo" />
             </Grid>
-            <Grid
-                container
-                item
-                xs={10}
-                // className={classes.loginContainer}
-                direction="row"
-                justify="center"
-                alignItems="center"
-            >
+            <Grid container item xs={10} direction="row" justify="center" alignItems="center">
                 <Formik
                     initialValues={{
                         password: "",
                         verifyPassword: "",
                     }}
                     validationSchema={validationSchema}
-                    onSubmit={(values) => {
+                    onSubmit={() => {
                         // auth.resetPassword({
                         //     token,
                         //     password: values.password,

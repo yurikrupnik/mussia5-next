@@ -6,9 +6,15 @@ enabled = true
 
   [analyzers.meta]
   environment = [
+    "jest",
+    "browser",
     "nodejs",
     "mongo"
   ]
   plugins = ["react"]
   style_guide = "airbnb"
   dialect = "typescript"
+
+[[transformers]]
+name = "prettier"
+enabled = true
