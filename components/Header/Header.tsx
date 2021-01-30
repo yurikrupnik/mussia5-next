@@ -52,7 +52,7 @@ const selectors = (theme: Theme) => ({
     // necessary for content to be below app bar
     toolbar: theme.mixins.toolbar,
     drawerPaper: {
-        // width: drawerWidth,
+        width: drawerWidth,
     },
     content: {
         // flexGrow: 1,

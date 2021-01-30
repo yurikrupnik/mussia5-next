@@ -53,7 +53,6 @@ const Login = () => {
     // const currencies = useContext(Currencies);
     // const onboarding = useContext(Onboarding);
     // const auth = useContext(Auth);
-    // const projects = useContext(Projects);
     const [loginError] = useState("");
     const [loading] = useState(false);
 
