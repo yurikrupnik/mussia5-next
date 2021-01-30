@@ -13,8 +13,8 @@ const handler = nc()
     .use(passport.initialize())
     .use(passport.session())
     .use((req, res, next) => {
-        console.log("re.sessions", req.sessions);
-        console.log("re.user", req.user);
+        console.log("re.sessions", req.sessions); // eslint-disable-line no-console
+        console.log("re.user", req.user); // eslint-disable-line no-console
         if (req.isAuthenticated()) {
             console.log("Authenticated user"); // eslint-disable-line no-console
         } else {

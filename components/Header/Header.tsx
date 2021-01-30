@@ -1,4 +1,4 @@
-import React from "react";
+import React, { SyntheticEvent } from "react";
 import { fade, makeStyles } from "@material-ui/core/styles";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
@@ -87,8 +87,8 @@ export default function PrimarySearchAppBar() {
     const isMenuOpen = Boolean(anchorEl);
     const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
 
-    const handleProfileMenuOpen = (event: any) => {
-        setAnchorEl(event.currentTarget);
+    const handleProfileMenuOpen = () => {
+        //     setAnchorEl(event.currentTarget);
     };
 
     const handleMobileMenuClose = () => {
@@ -100,8 +100,8 @@ export default function PrimarySearchAppBar() {
         handleMobileMenuClose();
     };
 
-    const handleMobileMenuOpen = (event: any) => {
-        setMobileMoreAnchorEl(event.currentTarget);
+    const handleMobileMenuOpen = () => {
+        // setMobileMoreAnchorEl(event.currentTarget);
     };
 
     const menuId = "primary-search-account-menu";

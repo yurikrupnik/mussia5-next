@@ -4,11 +4,15 @@ import { validatePassword } from "./crypt";
 
 import UserM, { UserGroupDocument } from "../../models/User";
 
-const serialize = (user: any, done: any) => done(null, user._id);
+const serialize = (user: UserGroupDocument, done: (a: null | Error, ad: UserGroupDocument) => void) =>
+    done(null, user._id);
 
-const deserialize = (_id: string, done: any) => UserM.findOne({ _id }, done);
+const deserialize = (_id: string, done: () => void) => UserM.findOne({ _id }, done);
 
-const checkValidUser = (user: UserGroupDocument, done: any) => (valid: boolean) => {
+const checkValidUser = (
+    user: UserGroupDocument,
+    done: (err: Error | null, us: UserGroupDocument | boolean, m?: string) => void
+) => (valid: boolean) => {
     console.log(">>>>>>>>>>>>>valid", valid);
     if (!valid) {
         done(null, false, "huuu"); // todo check it
@@ -89,10 +93,24 @@ const localStrategyHandler = (email: string, password: string, done: any) =>
 //     }
 // };
 
-const socialAppsRegisterCallback = (profile: any, token: string, refreshTocken: string, done: any) => () => {
-    console.log("token", token);
+const socialAppsRegisterCallback = (
+    profile: {
+        id: string;
+        emails: [{ value: string }];
+        photos: [{ value: string }];
+        name: {
+            givenName: string;
+            familyName: string;
+        };
+        provider: "google" | "github";
+    },
+    token: string,
+    refreshTocken: string,
+    done: (err: Error | null, usr?: UserGroupDocument) => void
+) => () => {
+    console.log("token", token); // eslint-disable-line
 
-    console.log("refreshTocken", refreshTocken);
+    console.log("refreshTocken", refreshTocken); // eslint-disable-line
     UserM.findOne({ id: profile.id })
         .then((user) => {
             if (user) {
@@ -120,7 +138,7 @@ const socialAppsRegisterCallback = (profile: any, token: string, refreshTocken: 
         .catch(done);
 };
 
-const socialNetworkStrategy = (token: string, refreshTocken: any, profile: any, done: any) =>
+const socialNetworkStrategy = (token: string, refreshTocken: string, profile: any, done: any) =>
     process.nextTick(socialAppsRegisterCallback(profile, token, refreshTocken, done));
 
 const setSocialAuth = (provider: string) =>

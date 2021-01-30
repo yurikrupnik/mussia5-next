@@ -7,7 +7,7 @@ import { socialNetworkStrategy } from "./utils";
 const client = new SecretManagerServiceClient();
 const project = client.getProjectId();
 
-console.log("project", project);
+console.log("project", project); // eslint-disable-line
 
 export default new Strategy(
     {
