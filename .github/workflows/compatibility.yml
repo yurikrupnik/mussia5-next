@@ -25,7 +25,6 @@ jobs:
         with:
           ide-versions: |
             ideaIC:2020.3
-            ideaIU:2020.3
 
 #      - name: Get log file path and print contents
 #        run: |
