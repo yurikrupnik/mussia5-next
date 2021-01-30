@@ -19,12 +19,12 @@ jobs:
 #      - name: Build the plugin using Gradle
 #        run: ./gradlew buildPlugin
 
-      - name: Verify Plugin on IntelliJ Platforms
-        id: verify
-        uses: ChrisCarini/intellij-platform-plugin-verifier-action@latest
-        with:
-          ide-versions: |
-            ideaIC:2020.3
+#      - name: Verify Plugin on IntelliJ Platforms
+#        id: verify
+#        uses: ChrisCarini/intellij-platform-plugin-verifier-action@latest
+#        with:
+#          ide-versions: |
+#            ideaIC:2020.3
 
 #      - name: Get log file path and print contents
 #        run: |
