@@ -15,6 +15,7 @@ enabled = true
   style_guide = "airbnb"
   dialect = "typescript"
 
+
 [[transformers]]
 name = "prettier"
 enabled = true
