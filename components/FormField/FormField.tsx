@@ -1,4 +1,4 @@
-import React, { useCallback, memo } from "react";
+import React, { useCallback, memo, useMemo } from "react";
 import { useField } from "formik";
 import FormControl from "@material-ui/core/FormControl";
 import TextField from "@material-ui/core/TextField";
@@ -51,6 +51,15 @@ const FormField: React.FC<Props> = (props) => {
         onChange(e);
     }, []);
 
+    const myP = useCallback(
+        (item) => (
+            <MenuItem key={item._id} value={item._id}>
+                {item.name}
+            </MenuItem>
+        ),
+        []
+    );
+
     if (type === "select") {
         return (
             <FormControl style={style} fullWidth={fullWidth} component="div">
@@ -68,11 +77,7 @@ const FormField: React.FC<Props> = (props) => {
                     select
                     value={value}
                 >
-                    {options.map((v) => (
-                        <MenuItem key={v._id} value={v._id}>
-                            {v.name}
-                        </MenuItem>
-                    ))}
+                    {myP}
                 </TextField>
             </FormControl>
         );
