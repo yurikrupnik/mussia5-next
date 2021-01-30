@@ -77,5 +77,8 @@
     "arrowParens": "always",
     "printWidth": 120,
     "tabWidth": 4
+  },
+  "jshintConfig": {
+    "esversion": 6
   }
 }
