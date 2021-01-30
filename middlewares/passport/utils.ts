@@ -62,8 +62,8 @@ const checkUserByEmailAndPass = (email: string, password: string, done: any) => 
     return validatePassword(password, user.password).then(checkValidUser(user, done));
 };
 
-const localStrategyHandler = (req: any, email: string, password: string, done: any) =>
-    UserM.findOne({ email }).then(checkUserByEmailAndPass(req, email, password, done)).catch(done);
+const localStrategyHandler = (email: string, password: string, done: any) =>
+    UserM.findOne({ email }).then(checkUserByEmailAndPass(email, password, done)).catch(done);
 
 // const localStrategyHandler = (req: Request, email: string, password: string, done: any) => {
 //     if (req.body.token) {
