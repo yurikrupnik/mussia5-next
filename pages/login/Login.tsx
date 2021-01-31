@@ -60,28 +60,24 @@ const Login = () => {
         router.push("/onboarding/step1");
     }, [router]);
 
+    const handleSignOut = useCallback(() => {
+        signOut();
+    }, []);
+
+    const handleSubmit = useCallback(
+        (values) =>
+            fetch("/api/auth", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(values),
+            }).then(() => {
+                router.push("/dashboard");
+            }),
+        []
+    );
+
     return (
         <Grid container item xs={12} direction="row" justify="center" alignItems="center">
-            {/*{openInfo && <DialogPasswordInfo open={openInfo} data={infoDialogData} toggleOpen={toggleOpenInfo} />}*/}
-
-            {/*{open && (*/}
-            {/*    <DialogPasswordInfo*/}
-            {/*        open={open}*/}
-            {/*        data={{*/}
-            {/*            title: "Reset Password",*/}
-            {/*            contentText: "Enter the email address associated with your Roundtrip account.",*/}
-            {/*            link: "",*/}
-            {/*            image: "",*/}
-            {/*            form: {*/}
-            {/*                email,*/}
-            {/*                handleEmail,*/}
-            {/*                handleReset,*/}
-            {/*                buttonText: "Email me recovery link",*/}
-            {/*            },*/}
-            {/*        }}*/}
-            {/*        toggleOpen={toggleOpen}*/}
-            {/*    />*/}
-            {/*)}*/}
             <Grid item xs={12}>
                 <Hidden smDown>
                     <img src={logo} alt="logo" />
@@ -97,49 +93,7 @@ const Login = () => {
                         password: "",
                         rememberMe: false,
                     }}
-                    // validate={(values) => {
-                    //     const passLength = 2;
-                    //     const errors = {};
-                    //     if (!values.email) {
-                    //         errors.email = "Email is required";
-                    //     } else if (!validateEmail(values.email)) {
-                    //         errors.email = "Not valid email";
-                    //     }
-                    //     if (!values.password) {
-                    //         errors.password = "Password is required";
-                    //     } else if (values.password.length < passLength) {
-                    //         errors.password = `Is too short, should be ${passLength} chars minimum.`;
-                    //     }
-                    //     return errors;
-                    // }}
-                    onSubmit={(values) => {
-                        // console.log ("values", values);
-                        // setLoading(true);
-                        fetch("/api/auth", {
-                            method: "POST",
-                            headers: { "Content-Type": "application/json" },
-                            body: JSON.stringify(values),
-                        }).then(() => {
-                            // console.log("r", r);
-                            router.push("/dashboard");
-                        });
-                        // auth.login({
-                        //     email: values.email,
-                        //     password: values.password,
-                        //     rememberMe: values.rememberMe,
-                        // })
-                        //     .then((user) => {
-                        //         console.log("user", user);
-                        //         // auth.localStore.setItem("rememberMe", user.token);
-                        //         setLoading(false);
-                        //     })
-                        //     .catch((err) => {
-                        //         // eslint-disable-next-line no-console
-                        //         console.log("err", err);
-                        //         setLoading(false);
-                        //         setLoginError("Your email or password is incorrect. Double check and try again.");
-                        //     });
-                    }}
+                    onSubmit={handleSubmit}
                 >
                     {(formikProps) => {
                         const { isValid } = formikProps;
@@ -156,31 +110,9 @@ const Login = () => {
                                 alignItems="center"
                             >
                                 <Form>
-                                    <Grid
-                                        container
-                                        item
-                                        xs={12}
-                                        direction="row"
-                                        justify="center"
-                                        alignItems="center"
-                                        // className={classes.loginContainerWrapper}
-                                    >
+                                    <Grid container item xs={12} direction="row" justify="center" alignItems="center">
                                         <Grid item xs={12}>
-                                            <Typography
-                                                // className={classes.dividerMargin}
-                                                variant="h6"
-                                                onClick={() => {
-                                                    signOut();
-                                                    // fetch("/api/auth", {
-                                                    //     method: "DELETE",
-                                                    //     headers: { "Content-Type": "application/json" },
-                                                    //     // body: JSON.stringify(values),
-                                                    // }).then((r) => {
-                                                    //     console.log("r", r);
-                                                    // });
-                                                }}
-                                                align="center"
-                                            >
+                                            <Typography variant="h6" onClick={handleSignOut} align="center">
                                                 Welcome
                                             </Typography>
                                         </Grid>
@@ -229,12 +161,6 @@ const Login = () => {
                                                 type="text"
                                                 name="email"
                                                 label="Email"
-                                                // component={TextField}
-                                                // endAdornment={
-                                                //     <InputAdornment>
-                                                //         <MailOutlineIcon />
-                                                //     </InputAdornment>
-                                                // }
                                                 disabled={loading}
                                             />
                                         </Grid>
@@ -244,46 +170,12 @@ const Login = () => {
                                                 type="password"
                                                 name="password"
                                                 label="Password"
-                                                // component={TextField}
-                                                // endAdornment={
-                                                //     <InputAdornment>
-                                                //         <VpnKeyIcon />
-                                                //     </InputAdornment>
-                                                // }
                                                 disabled={loading}
                                             />
                                         </Grid>
                                         <Grid item container xs={12} alignItems="center">
-                                            {/*<Grid item sm={6} xs={12}>*/}
-                                            {/*    <FormControlLabel*/}
-                                            {/*        label="Remember me"*/}
-                                            {/*        control={*/}
-                                            {/*            <Checkbox*/}
-                                            {/*                onChange={formikProps.handleChange}*/}
-                                            {/*                name="rememberMe"*/}
-                                            {/*                color="primary"*/}
-                                            {/*                icon={<CircleUnchecked />}*/}
-                                            {/*                checkedIcon={<CircleCheckedFilled />}*/}
-                                            {/*                disabled={loading}*/}
-                                            {/*            />*/}
-                                            {/*        }*/}
-                                            {/*    />*/}
-                                            {/*</Grid>*/}
-                                            <Grid
-                                                item
-                                                sm={6}
-                                                xs={12}
-                                                container
-                                                justify="flex-end"
-                                                // className={classes.forgotPasswordWrapper}
-                                            >
-                                                <Button
-                                                    // onClick={toggleOpen}
-                                                    // className={classes.forgotPass}
-                                                    disabled={loading}
-                                                >
-                                                    Forgot Password
-                                                </Button>
+                                            <Grid item sm={6} xs={12} container justify="flex-end">
+                                                <Button disabled={loading}>Forgot Password</Button>
                                             </Grid>
                                         </Grid>
                                         <Grid item xs={12}>
@@ -291,15 +183,11 @@ const Login = () => {
                                                 fullWidth
                                                 size="large"
                                                 variant="contained"
-                                                // className={`${classes.loginButton} ${classes.buttonMargin}`}
                                                 type="submit"
                                                 disabled={!isValid}
                                             >
                                                 Login
                                             </Button>
-                                            {/*<Grid container className={classes.wrapperSpinner}>*/}
-                                            {/*    {loading && <SpinnerPlatform />}*/}
-                                            {/*</Grid>*/}
                                         </Grid>
                                         <Button onClick={() => signin("google")}>signin google</Button>
                                         <a href="/api/auth/google">
