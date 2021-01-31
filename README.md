@@ -30,6 +30,8 @@
 [![Total alerts](https://img.shields.io/lgtm/alerts/g/yurikrupnik/mussia5-next.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/yurikrupnik/mussia5-next/alerts/)
 [![Language grade: JavaScript](https://img.shields.io/lgtm/grade/javascript/g/yurikrupnik/mussia5-next.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/yurikrupnik/mussia5-next/context:javascript)
 
+[![deepcode](https://www.deepcode.ai/api/gh/badge?key=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwbGF0Zm9ybTEiOiJnaCIsIm93bmVyMSI6Inl1cmlrcnVwbmlrIiwicmVwbzEiOiJtdXNzaWE1LW5leHQiLCJpbmNsdWRlTGludCI6ZmFsc2UsImF1dGhvcklkIjoyMDA3NCwiaWF0IjoxNjEyMTE3NDAxfQ.pkrAi30iuqRQs8zQ3kUao4LEw0n6bPNOdRbxQ5DHtBA)](https://www.deepcode.ai/app/gh/yurikrupnik/mussia5-next/_/dashboard?utm_content=gh%2Fyurikrupnik%2Fmussia5-next)
+
 [![CodeScene general](https://codescene.io/images/analyzed-by-codescene-badge.svg)](https://codescene.io/projects/12553)
 [![CodeScene Code Health](https://codescene.io/projects/12553/status-badges/code-health)](https://codescene.io/projects/12553)
 [![CodeScene System Mastery](https://codescene.io/projects/12553/status-badges/system-mastery)](https://codescene.io/projects/12553)
