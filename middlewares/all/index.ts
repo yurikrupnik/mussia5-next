@@ -1,5 +1,6 @@
 import nc from "next-connect";
 import morgan from "morgan";
+import helmet from "helmet";
 import cookieParser from "cookie-parser";
 import passport from "@/middlewares/passport";
 import connectDb from "@/middlewares/db";
@@ -7,6 +8,7 @@ import session from "@/middlewares/session";
 
 const handler = nc()
     .use(morgan("dev"))
+    .use(helmet())
     .use(cookieParser())
     .use(connectDb)
     .use(session)
