@@ -30,6 +30,10 @@
 [![Total alerts](https://img.shields.io/lgtm/alerts/g/yurikrupnik/mussia5-next.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/yurikrupnik/mussia5-next/alerts/)
 [![Language grade: JavaScript](https://img.shields.io/lgtm/grade/javascript/g/yurikrupnik/mussia5-next.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/yurikrupnik/mussia5-next/context:javascript)
 
+[![CodeScene general](https://codescene.io/images/analyzed-by-codescene-badge.svg)](https://codescene.io/projects/12553)
+[![CodeScene Code Health](https://codescene.io/projects/12553/status-badges/code-health)](https://codescene.io/projects/12553)
+[![CodeScene System Mastery](https://codescene.io/projects/12553/status-badges/system-mastery)](https://codescene.io/projects/12553)
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
