@@ -4,9 +4,11 @@ import helmet from "helmet";
 import cookieParser from "cookie-parser";
 // import passport from "@/middlewares/passport";
 import connectDb from "@/middlewares/db";
-import session from "@/middlewares/session";
+// import session from "@/middlewares/session";
 
-const handler = nc().use(morgan("dev")).use(helmet()).use(cookieParser()).use(connectDb).use(session);
+// eslint-disable-next-line
+const handler = nc().use(morgan("dev")).use(helmet()).use(cookieParser()).use(connectDb);
+
 // .use(passport.initialize())
 // .use(passport.session())
 // .use((req, res, next) => {

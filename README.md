@@ -5,6 +5,10 @@
 [![codebeat badge](https://codebeat.co/badges/ee3e2040-5278-4aa7-9747-4e761971a644)](https://codebeat.co/projects/github-com-yurikrupnik-mussia5-next-main)
 [![codecov](https://codecov.io/gh/yurikrupnik/mussia5-next/branch/main/graph/badge.svg?token=HE275XMUUJ)](https://codecov.io/gh/yurikrupnik/mussia5-next)
 
+[![Depfu](https://badges.depfu.com/badges/20eba711fa82845bfd63a8401acf219a/status.svg)](https://depfu.com)
+[![Depfu](https://badges.depfu.com/badges/20eba711fa82845bfd63a8401acf219a/overview.svg)](https://depfu.com/github/yurikrupnik/mussia5-next?project_id=21659)
+[![Depfu](https://badges.depfu.com/badges/20eba711fa82845bfd63a8401acf219a/count.svg)](https://depfu.com/github/yurikrupnik/mussia5-next?project_id=21659)
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
