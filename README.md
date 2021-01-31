@@ -12,7 +12,6 @@
 [![codebeat badge](https://codebeat.co/badges/ee3e2040-5278-4aa7-9747-4e761971a644)](https://codebeat.co/projects/github-com-yurikrupnik-mussia5-next-main)
 [![BCH compliance](https://bettercodehub.com/edge/badge/yurikrupnik/mussia5-next?branch=main)](https://bettercodehub.com/)
 
-
 [![DeepSource](https://deepsource.io/gh/yurikrupnik/mussia5-next.svg/?label=active+issues&show_trend=true)](https://deepsource.io/gh/yurikrupnik/mussia5-next/?ref=repository-badge)
 [![DeepSource](https://deepsource.io/gh/yurikrupnik/mussia5-next.svg/?label=resolved+issues&show_trend=true)](https://deepsource.io/gh/yurikrupnik/mussia5-next/?ref=repository-badge)
 
@@ -30,7 +29,6 @@
 
 [![Total alerts](https://img.shields.io/lgtm/alerts/g/yurikrupnik/mussia5-next.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/yurikrupnik/mussia5-next/alerts/)
 [![Language grade: JavaScript](https://img.shields.io/lgtm/grade/javascript/g/yurikrupnik/mussia5-next.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/yurikrupnik/mussia5-next/context:javascript)
-
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
