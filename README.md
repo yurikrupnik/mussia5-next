@@ -9,6 +9,18 @@
 [![Depfu](https://badges.depfu.com/badges/20eba711fa82845bfd63a8401acf219a/overview.svg)](https://depfu.com/github/yurikrupnik/mussia5-next?project_id=21659)
 [![Depfu](https://badges.depfu.com/badges/20eba711fa82845bfd63a8401acf219a/count.svg)](https://depfu.com/github/yurikrupnik/mussia5-next?project_id=21659)
 
+[![Bugs](https://sonarcloud.io/api/project_badges/measure?project=yurikrupnik_mussia5-next&metric=bugs)](https://sonarcloud.io/dashboard?id=yurikrupnik_mussia5-next)
+[![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=yurikrupnik_mussia5-next&metric=code_smells)](https://sonarcloud.io/dashboard?id=yurikrupnik_mussia5-next)
+[![Coverage](https://sonarcloud.io/api/project_badges/measure?project=yurikrupnik_mussia5-next&metric=coverage)](https://sonarcloud.io/dashboard?id=yurikrupnik_mussia5-next)
+[![Duplicated Lines (%)](https://sonarcloud.io/api/project_badges/measure?project=yurikrupnik_mussia5-next&metric=duplicated_lines_density)](https://sonarcloud.io/dashboard?id=yurikrupnik_mussia5-next)
+[![Lines of Code](https://sonarcloud.io/api/project_badges/measure?project=yurikrupnik_mussia5-next&metric=ncloc)](https://sonarcloud.io/dashboard?id=yurikrupnik_mussia5-next)
+[![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=yurikrupnik_mussia5-next&metric=sqale_rating)](https://sonarcloud.io/dashboard?id=yurikrupnik_mussia5-next)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=yurikrupnik_mussia5-next&metric=alert_status)](https://sonarcloud.io/dashboard?id=yurikrupnik_mussia5-next)
+[![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?project=yurikrupnik_mussia5-next&metric=reliability_rating)](https://sonarcloud.io/dashboard?id=yurikrupnik_mussia5-next)
+[![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=yurikrupnik_mussia5-next&metric=security_rating)](https://sonarcloud.io/dashboard?id=yurikrupnik_mussia5-next)
+[![Technical Debt](https://sonarcloud.io/api/project_badges/measure?project=yurikrupnik_mussia5-next&metric=sqale_index)](https://sonarcloud.io/dashboard?id=yurikrupnik_mussia5-next)
+[![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=yurikrupnik_mussia5-next&metric=vulnerabilities)](https://sonarcloud.io/dashboard?id=yurikrupnik_mussia5-next)
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
