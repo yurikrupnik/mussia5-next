@@ -1,3 +1,4 @@
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/99f290f378fb47bcad939f0db2803923)](https://app.codacy.com/gh/yurikrupnik/mussia5-next?utm_source=github.com&utm_medium=referral&utm_content=yurikrupnik/mussia5-next&utm_campaign=Badge_Grade)
 [![DeepSource](https://deepsource.io/gh/yurikrupnik/mussia5-next.svg/?label=active+issues&show_trend=true)](https://deepsource.io/gh/yurikrupnik/mussia5-next/?ref=repository-badge)
 [![DeepSource](https://deepsource.io/gh/yurikrupnik/mussia5-next.svg/?label=resolved+issues&show_trend=true)](https://deepsource.io/gh/yurikrupnik/mussia5-next/?ref=repository-badge)
 [![DeepScan grade](https://deepscan.io/api/teams/12695/projects/15729/branches/318942/badge/grade.svg)](https://deepscan.io/dashboard#view=project&tid=12695&pid=15729&bid=318942)
