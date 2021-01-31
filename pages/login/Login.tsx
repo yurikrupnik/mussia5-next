@@ -60,6 +60,10 @@ const Login = () => {
         router.push("/onboarding/step1");
     }, [router]);
 
+    const handleSignOut = useCallback(() => {
+        signOut();
+    }, []);
+
     return (
         <Grid container item xs={12} direction="row" justify="center" alignItems="center">
             <Grid item xs={12}>
@@ -104,13 +108,7 @@ const Login = () => {
                                 <Form>
                                     <Grid container item xs={12} direction="row" justify="center" alignItems="center">
                                         <Grid item xs={12}>
-                                            <Typography
-                                                variant="h6"
-                                                onClick={() => {
-                                                    signOut();
-                                                }}
-                                                align="center"
-                                            >
+                                            <Typography variant="h6" onClick={handleSignOut} align="center">
                                                 Welcome
                                             </Typography>
                                         </Grid>
