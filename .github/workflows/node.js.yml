@@ -35,4 +35,4 @@ jobs:
 #    - name: Code Inspector GitHub action
 #      uses: codeinspectorio/github-action@v1
 #    - run: npm run test
-    - run: npm run build
+#    - run: npm run build
