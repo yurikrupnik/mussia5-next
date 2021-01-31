@@ -28,7 +28,8 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - run: npm ci
       - run: npm run lint
-      - run: npm run test -- --coverage --coverageReporters=cobertura
+      - run: npm run test -- --coverage
+#        - --coverageReporters=cobertura
       - uses: codecov/codecov-action@v1
         with:
           token: ${{ secrets.CODECOV_TOKEN }} # not required for public repos
@@ -37,6 +38,11 @@ jobs:
 #          name: codecov-umbrella # optional
 #          fail_ci_if_error: true # optional (default = false)
 #          verbose: true # optional (default = false)'
+      - uses: VeryGoodOpenSource/very_good_coverage@v1.1.1
+        with:
+          path: "./coverage/lcov.info"
+          min_coverage: 80
+          exclude: "**/*_observer.dart **/change.dart"
       - run: npm run build
 
 #steps:
