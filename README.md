@@ -21,6 +21,9 @@
 [![Technical Debt](https://sonarcloud.io/api/project_badges/measure?project=yurikrupnik_mussia5-next&metric=sqale_index)](https://sonarcloud.io/dashboard?id=yurikrupnik_mussia5-next)
 [![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=yurikrupnik_mussia5-next&metric=vulnerabilities)](https://sonarcloud.io/dashboard?id=yurikrupnik_mussia5-next)
 
+[![Total alerts](https://img.shields.io/lgtm/alerts/g/yurikrupnik/mussia5-next.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/yurikrupnik/mussia5-next/alerts/)
+[![Language grade: JavaScript](https://img.shields.io/lgtm/grade/javascript/g/yurikrupnik/mussia5-next.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/yurikrupnik/mussia5-next/context:javascript)
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
