@@ -64,6 +64,18 @@ const Login = () => {
         signOut();
     }, []);
 
+    const handleSubmit = useCallback(
+        (values) =>
+            fetch("/api/auth", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(values),
+            }).then(() => {
+                router.push("/dashboard");
+            }),
+        []
+    );
+
     return (
         <Grid container item xs={12} direction="row" justify="center" alignItems="center">
             <Grid item xs={12}>
@@ -81,15 +93,7 @@ const Login = () => {
                         password: "",
                         rememberMe: false,
                     }}
-                    onSubmit={(values) => {
-                        fetch("/api/auth", {
-                            method: "POST",
-                            headers: { "Content-Type": "application/json" },
-                            body: JSON.stringify(values),
-                        }).then(() => {
-                            router.push("/dashboard");
-                        });
-                    }}
+                    onSubmit={handleSubmit}
                 >
                     {(formikProps) => {
                         const { isValid } = formikProps;
