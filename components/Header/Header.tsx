@@ -25,7 +25,7 @@ import MoreIcon from "@material-ui/icons/MoreVert";
 
 // import { useSession } from "next-auth/client";
 
-const drawerWidth = 240;
+const drawerWidth = 250;
 
 const selectors = (theme: Theme) => ({
     root: {
