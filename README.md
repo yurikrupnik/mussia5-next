@@ -1,14 +1,20 @@
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/99f290f378fb47bcad939f0db2803923)](https://app.codacy.com/gh/yurikrupnik/mussia5-next?utm_source=github.com&utm_medium=referral&utm_content=yurikrupnik/mussia5-next&utm_campaign=Badge_Grade)
-[![DeepSource](https://deepsource.io/gh/yurikrupnik/mussia5-next.svg/?label=active+issues&show_trend=true)](https://deepsource.io/gh/yurikrupnik/mussia5-next/?ref=repository-badge)
-[![DeepSource](https://deepsource.io/gh/yurikrupnik/mussia5-next.svg/?label=resolved+issues&show_trend=true)](https://deepsource.io/gh/yurikrupnik/mussia5-next/?ref=repository-badge)
-[![DeepScan grade](https://deepscan.io/api/teams/12695/projects/15729/branches/318942/badge/grade.svg)](https://deepscan.io/dashboard#view=project&tid=12695&pid=15729&bid=318942)
-[![CodeFactor](https://www.codefactor.io/repository/github/yurikrupnik/mussia5-next/badge)](https://www.codefactor.io/repository/github/yurikrupnik/mussia5-next)
-[![codebeat badge](https://codebeat.co/badges/ee3e2040-5278-4aa7-9747-4e761971a644)](https://codebeat.co/projects/github-com-yurikrupnik-mussia5-next-main)
+[![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
+![Node.js CI](https://github.com/yurikrupnik/mussia5-next/workflows/Node.js%20CI/badge.svg)
 [![codecov](https://codecov.io/gh/yurikrupnik/mussia5-next/branch/main/graph/badge.svg?token=HE275XMUUJ)](https://codecov.io/gh/yurikrupnik/mussia5-next)
 
 [![Depfu](https://badges.depfu.com/badges/20eba711fa82845bfd63a8401acf219a/status.svg)](https://depfu.com)
 [![Depfu](https://badges.depfu.com/badges/20eba711fa82845bfd63a8401acf219a/overview.svg)](https://depfu.com/github/yurikrupnik/mussia5-next?project_id=21659)
 [![Depfu](https://badges.depfu.com/badges/20eba711fa82845bfd63a8401acf219a/count.svg)](https://depfu.com/github/yurikrupnik/mussia5-next?project_id=21659)
+
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/99f290f378fb47bcad939f0db2803923)](https://app.codacy.com/gh/yurikrupnik/mussia5-next?utm_source=github.com&utm_medium=referral&utm_content=yurikrupnik/mussia5-next&utm_campaign=Badge_Grade)
+[![DeepScan grade](https://deepscan.io/api/teams/12695/projects/15729/branches/318942/badge/grade.svg)](https://deepscan.io/dashboard#view=project&tid=12695&pid=15729&bid=318942)
+[![CodeFactor](https://www.codefactor.io/repository/github/yurikrupnik/mussia5-next/badge)](https://www.codefactor.io/repository/github/yurikrupnik/mussia5-next)
+[![codebeat badge](https://codebeat.co/badges/ee3e2040-5278-4aa7-9747-4e761971a644)](https://codebeat.co/projects/github-com-yurikrupnik-mussia5-next-main)
+[![BCH compliance](https://bettercodehub.com/edge/badge/yurikrupnik/mussia5-next?branch=main)](https://bettercodehub.com/)
+
+
+[![DeepSource](https://deepsource.io/gh/yurikrupnik/mussia5-next.svg/?label=active+issues&show_trend=true)](https://deepsource.io/gh/yurikrupnik/mussia5-next/?ref=repository-badge)
+[![DeepSource](https://deepsource.io/gh/yurikrupnik/mussia5-next.svg/?label=resolved+issues&show_trend=true)](https://deepsource.io/gh/yurikrupnik/mussia5-next/?ref=repository-badge)
 
 [![Bugs](https://sonarcloud.io/api/project_badges/measure?project=yurikrupnik_mussia5-next&metric=bugs)](https://sonarcloud.io/dashboard?id=yurikrupnik_mussia5-next)
 [![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=yurikrupnik_mussia5-next&metric=code_smells)](https://sonarcloud.io/dashboard?id=yurikrupnik_mussia5-next)
@@ -24,6 +30,7 @@
 
 [![Total alerts](https://img.shields.io/lgtm/alerts/g/yurikrupnik/mussia5-next.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/yurikrupnik/mussia5-next/alerts/)
 [![Language grade: JavaScript](https://img.shields.io/lgtm/grade/javascript/g/yurikrupnik/mussia5-next.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/yurikrupnik/mussia5-next/context:javascript)
+
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
