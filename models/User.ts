@@ -1,7 +1,7 @@
 import mongoose, { Schema, Document, Model as Mo, SchemaTypeOptions } from "mongoose";
 // import { dbModel } from "./config";
 import { validateEmail } from "../utils/validation";
-import { generateHashSync } from "../utils/crypt";
+// import { generateHashSync } from "../utils/crypt";
 
 const usersRoles = ["editor", "finance", "admin", "crm"];
 
@@ -81,7 +81,7 @@ const userGroupSchemaObj: Record<keyof UserGroup, SchemaTypeOptions<any>> = {
         },
         // required: true,
         // required: function() [{ return this.a === 'test'; }, 'YOUR CUSTOME MSG HERE']
-        set: generateHashSync,
+        // set: generateHashSync,
     },
     role: {
         type: String,

@@ -1,7 +1,7 @@
 import React from "react";
 // import startCase from "lodash/startCase";
-import Highcharts from "highcharts";
-import HighchartsReact from "highcharts-react-official";
+// import Highcharts from "highcharts";
+// import HighchartsReact from "highcharts-react-official";
 import { NextPageContext } from "next";
 
 // mock data - change to real api requests
@@ -29,15 +29,16 @@ import { NextPageContext } from "next";
 //     "electricity-main": electricityMain,
 // };
 
-interface Props {
-    options: any;
-}
+// interface Props {
+//     // options?: any;
+// }
 
-const Id = (props: Props) => {
-    const { options } = props;
+const Id = () => {
+    // const { options } = props;
+    const ad = "ad";
     return (
         <div>
-            <HighchartsReact highcharts={Highcharts} options={options} />
+            <div>{ad}</div>
         </div>
     );
 };
