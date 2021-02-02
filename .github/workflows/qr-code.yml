@@ -2,8 +2,6 @@ name: Test and codecov
 
 on:
   pull_request
-#    branches: [ main ]
-#  pull_request:
 
 jobs:
   qr-code:
