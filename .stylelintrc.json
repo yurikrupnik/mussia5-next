@@ -1,0 +1,7 @@
+{
+  "extends": "stylelint-config-standard",
+  "ignoreFiles": ["./coverage/**", "./terrraform/**"],
+  "rules": {
+    "indentation": 4
+  }
+}
