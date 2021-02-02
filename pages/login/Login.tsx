@@ -57,7 +57,7 @@ const Login = () => {
     const [loading] = useState(false);
 
     const register = useCallback(() => {
-        router.push("/onboarding/2");
+        router.push("/onboarding/25");
     }, [router]);
 
     const handleSignOut = useCallback(() => {
