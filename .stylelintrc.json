@@ -1,7 +1,7 @@
 {
-    "extends": "stylelint-config-standard",
+    "extends": ["stylelint-config-standard", "stylelint-prettier/recommended"],
+    "plugins": ["stylelint-prettier"],
     "ignoreFiles": ["./coverage/**", "./terrraform/**"],
     "rules": {
-        "indentation": 4
     }
 }
