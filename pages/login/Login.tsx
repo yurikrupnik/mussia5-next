@@ -57,7 +57,7 @@ const Login = () => {
     const [loading] = useState(false);
 
     const register = useCallback(() => {
-        router.push("/onboarding/step1");
+        router.push("/onboarding/25");
     }, [router]);
 
     const handleSignOut = useCallback(() => {
@@ -83,7 +83,7 @@ const Login = () => {
                     <img src={logo} alt="logo" />
                 </Hidden>
                 <Hidden mdUp>
-                    <img src={logoBlack} alt="logo" />
+                    <img src={logoBlack} alt="logos" />
                 </Hidden>
             </Grid>
             <Grid container item sm={10} xs={12} direction="row" justify="center" alignItems="center">
