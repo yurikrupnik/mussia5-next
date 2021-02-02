@@ -36,6 +36,8 @@
 [![CodeScene Code Health](https://codescene.io/projects/12553/status-badges/code-health)](https://codescene.io/projects/12553)
 [![CodeScene System Mastery](https://codescene.io/projects/12553/status-badges/system-mastery)](https://codescene.io/projects/12553)
 
+[![DepShield Badge](https://depshield.sonatype.org/badges/yurikrupnik/mussia5-next/depshield.svg)](https://depshield.github.io)
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
