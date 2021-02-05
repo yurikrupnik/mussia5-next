@@ -1,6 +1,6 @@
 {
-    "env": {"es6": true},
-    "parserOptions": {"ecmaVersion": 2018},
+    "env": { "es6": true },
+    "parserOptions": { "ecmaVersion": 2018 },
     "extends": ["stylelint-config-standard"],
     "plugins": ["stylelint-prettier"],
     "ignoreFiles": ["./coverage/**", "./terrraform/**"],
