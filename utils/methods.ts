@@ -1,7 +1,5 @@
 import { NextApiRequest, NextApiResponse } from "next";
-import { Document } from "mongoose";
-
-import mongoose from "mongoose";
+import mongoose, { Document } from "mongoose";
 
 const responseId = (req: NextApiRequest, res: NextApiResponse) => {
     const { id } = req.query;
