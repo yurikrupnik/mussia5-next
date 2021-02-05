@@ -10,6 +10,7 @@
         "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
         "test": "jest . --colors"
     },
+    "node": ">=12.0.0",
     "dependencies": {
         "@google-cloud/secret-manager": "3.4.0",
         "@material-ui/core": "4.11.3",
@@ -53,9 +54,11 @@
         "@typescript-eslint/parser": "4.14.2",
         "eslint": "7.19.0",
         "eslint-config-airbnb": "18.2.1",
+        "eslint-config-stylelint": "^13.1.0",
         "eslint-import-resolver-typescript": "2.3.0",
         "eslint-plugin-import": "2.22.1",
         "eslint-plugin-jsx-a11y": "6.4.1",
+        "eslint-plugin-prettier": "^3.3.1",
         "eslint-plugin-react": "7.22.0",
         "eslint-plugin-react-hooks": "4.2.0",
         "eslint-plugin-tsdoc": "0.2.11",
