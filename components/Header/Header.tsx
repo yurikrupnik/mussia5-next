@@ -25,9 +25,9 @@ import CustomButton from "../CustomButton";
 
 // import { useSession } from "next-auth/client";
 
-const add = (a: number, b: number) => a + b;
-
-add(1, 4);
+// const add = (a: number, b: number) => a + b;
+//
+// add(1, 4);
 const drawerWidth = 250;
 
 const selectors = (theme: Theme) => ({
