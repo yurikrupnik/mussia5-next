@@ -1,0 +1,9 @@
+{
+    "env": { "es6": true },
+    "parserOptions": { "ecmaVersion": 2018 },
+    "extends": ["stylelint-config-standard"],
+    "ignoreFiles": ["./coverage/**", "./terrraform/**"],
+    "rules": {
+        "indentation": 4
+    }
+}

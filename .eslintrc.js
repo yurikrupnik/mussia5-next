@@ -1,8 +1,9 @@
 module.exports = {
     parser: "@typescript-eslint/parser",
-    plugins: ["@typescript-eslint", "eslint-plugin-tsdoc", "react-hooks", "react"],
+    plugins: ["@typescript-eslint", "eslint-plugin-tsdoc", "prettier", "react-hooks", "react"],
 
     rules: {
+        "prettier/prettier": "error",
         "tsdoc/syntax": "warn",
         "react/jsx-one-expression-per-line": 0,
         "import/no-unresolved": ["error", { ignore: ["^@"] }], // added for next.js paths from tsconfig.json

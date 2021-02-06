@@ -7,7 +7,6 @@ import Typography from "@material-ui/core/Typography";
 import InputBase from "@material-ui/core/InputBase";
 import Badge from "@material-ui/core/Badge";
 import MenuItem from "@material-ui/core/MenuItem";
-// import Drawer from "@material-ui/core/Drawer";
 // import Hidden from "@material-ui/core/Hidden";
 // import List from "@material-ui/core/List";
 // import ListItem from "@material-ui/core/ListItem";
@@ -22,12 +21,13 @@ import AccountCircle from "@material-ui/icons/AccountCircle";
 import MailIcon from "@material-ui/icons/Mail";
 import NotificationsIcon from "@material-ui/icons/Notifications";
 import MoreIcon from "@material-ui/icons/MoreVert";
+import CustomButton from "../CustomButton";
 
 // import { useSession } from "next-auth/client";
 
-const add = (a: number, b: number) => a + b;
-
-add(1, 4);
+// const add = (a: number, b: number) => a + b;
+//
+// add(1, 4);
 const drawerWidth = 250;
 
 const selectors = (theme: Theme) => ({
@@ -181,6 +181,7 @@ export default function PrimarySearchAppBar() {
 
     return (
         <div>
+            <CustomButton />
             <AppBar position="static">
                 <Toolbar>
                     <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="open drawer">
