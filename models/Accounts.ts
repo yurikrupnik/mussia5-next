@@ -27,7 +27,7 @@ type AccountsFront = {
 // type User = Pick<SchemaTimestampsConfig, SchemaFilter> & AccountsFront;
 type AccountsDocument = Pick<SchemaTimestampsConfig, SchemaFilter> & AccountsFront & Document;
 
-const AccountsSchemaObj: Record<keyof AccountsFront, SchemaTypeOptions<any>> = {
+const AccountsSchemaObj: Record<keyof AccountsFront, SchemaTypeOptions<string | number>> = {
     compoundId: {
         type: String,
     },
