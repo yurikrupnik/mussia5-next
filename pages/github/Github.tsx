@@ -4,7 +4,7 @@ import request from "axios";
 
 const Github = () => {
     const [session] = useSession();
-    console.log("session", session);
+    console.log("session -1", session);
     useEffect(() => {
         request.get("https://api.github.com/user", {
             headers: {
