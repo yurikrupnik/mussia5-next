@@ -15,7 +15,7 @@ const handleError = (res: NextApiResponse) => {
 function respondWithResult<T>(res: NextApiResponse) {
     return (entity: T) => {
         if (!entity) {
-            console.log("null entitiy fix error", entity);
+            console.log("null entitiy fix error", entity); // eslint-disable-line
             // res.statusCode = 404;
             // res.statusMessage = "aris";
             // res.end();
@@ -27,12 +27,12 @@ function respondWithResult<T>(res: NextApiResponse) {
     };
 }
 
-const list = <T extends mongoose.Model<any>>(Model: T) => (req: NextApiRequest, res: NextApiResponse) => {
+const list = <T extends mongoose.Model<Document>>(Model: T) => (req: NextApiRequest, res: NextApiResponse) => {
     Model.find(req.query).then(respondWithResult(res)).catch(handleError(res));
 };
 
 // changed from express params to query - next way for dynamic routes
-const find = (Model: any) => (req: NextApiRequest, res: NextApiResponse) => {
+const find = (Model: mongoose.Model<Document>) => (req: NextApiRequest, res: NextApiResponse) => {
     Model.findOne({ _id: req.query.id }).then(respondWithResult(res)).catch(handleError(res));
 };
 
