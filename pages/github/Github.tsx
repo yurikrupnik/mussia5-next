@@ -9,7 +9,7 @@ const Github = () => {
         request.get("https://api.github.com/user", {
             headers: {
                 "Content-Type": "application/json",
-                Authorization: `token 0ddfe0e7775e8153f98e6ad75b6777750ae5895a`,
+                // Authorization: `token ${token here}`, todo
             },
         });
         // fetch({
