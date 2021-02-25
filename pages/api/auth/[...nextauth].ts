@@ -2,27 +2,7 @@ import NextAuth from "next-auth";
 import Providers from "next-auth/providers";
 import { NextApiRequest, NextApiResponse } from "next";
 
-// const options = {
-//     // Configure one or more authentication providers
-//     providers: [
-//         Providers.Google({
-//             // clientID: "552054097269-8dpq61pku540cl71mb9jtho3dag3sglk.apps.googleusercontent.com",
-//             // clientSecret: process.env.GOOGLE_CLIENT_SECRET || "JG5rjZqAZluroM6eZ2H254LR",
-//             clientId: "206012550014-pj6ilj273h60b7qiokg3dh4j450391er.apps.googleusercontent.com",
-//             // clientId: process.env.GOOGLE_CLIENT_ID,
-//             // clientSecret: process.env.GOOGLE_CLIENT_SECRET
-//             clientSecret: "vJfuqmQAACdwAGGMCXtpdCQX",
-//         }),
-//         // ...add more providers here
-//     ],
-//
-//     // A database is optional, but required to persist accounts in a database
-//     // database: process.env.DATABASE_URL,
-//     // todo
-//     database: "mongodb://localhost/mussia5-next",
-//     // database: "mongodb+srv://admin:AXnEdzgKsyg8XVaN@cluster0.zurzw.mongodb.net",
-// };
-
+console.log("process.env.GITHUB_CLIENT_ID", process.env.GITHUB_CLIENT_ID); // eslint-disable-line
 export default (req: NextApiRequest, res: NextApiResponse) =>
     NextAuth(req, res, {
         providers: [
@@ -53,28 +33,31 @@ export default (req: NextApiRequest, res: NextApiResponse) =>
             //     },
             // }),
             Providers.GitHub({
-                // clientId: "453146d4f22a9dc52f30",
-                clientId: "Iv1.5b44de52edb0b343",
-                clientSecret: "a98d15f9f52a5adde9643d2decd95ec8cdc46bd0",
+                // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+                // @ts-ignore
+                clientId: process.env.GITHUB_CLIENT_ID,
+                // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+                // @ts-ignore
+                clientSecret: process.env.GITHUB_CLIENT_SECRET,
                 scope: "repo gist",
                 // clientSecret: "e2652da3b0fa1320b294ba4b35d979ccf52aff69",
             }),
             Providers.Google({
-                // clientID: "552054097269-8dpq61pku540cl71mb9jtho3dag3sglk.apps.googleusercontent.com",
-                // clientSecret: process.env.GOOGLE_CLIENT_SECRET || "JG5rjZqAZluroM6eZ2H254LR",
-                clientId: "206012550014-djactupct5k19rbem7m6da2kffni2vmj.apps.googleusercontent.com",
-                // clientId: process.env.GOOGLE_CLIENT_ID,
-                // clientSecret: process.env.GOOGLE_CLIENT_SECRET
-                clientSecret: "W1eaP-uDDtck8dgYG7TYQgRg",
+                // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+                // @ts-ignore
+                clientSecret: process.env.GOOGLE_CLIENT_SECRET,
+                // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+                // @ts-ignore
+                clientId: process.env.GOOGLE_CLIENT_ID,
             }),
             Providers.Email({
-                from: "krupnik.yuri@gmail.com",
+                from: process.env.PROVIDER_EMAIL,
                 maxAge: 50000,
                 // server: "",
             }),
             // Providers.Credentials({}),
             // ...add more providers here
         ],
-        database: "mongodb://0.0.0.0/mussia5-next",
+        database: process.env.MONGODB_URI,
         // debug: true,
     });
