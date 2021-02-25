@@ -32,6 +32,9 @@
 
 [![deepcode](https://www.deepcode.ai/api/gh/badge?key=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwbGF0Zm9ybTEiOiJnaCIsIm93bmVyMSI6Inl1cmlrcnVwbmlrIiwicmVwbzEiOiJtdXNzaWE1LW5leHQiLCJpbmNsdWRlTGludCI6ZmFsc2UsImF1dGhvcklkIjoyMDA3NCwiaWF0IjoxNjEyMTE3NDAxfQ.pkrAi30iuqRQs8zQ3kUao4LEw0n6bPNOdRbxQ5DHtBA)](https://www.deepcode.ai/app/gh/yurikrupnik/mussia5-next/_/dashboard?utm_content=gh%2Fyurikrupnik%2Fmussia5-next)
 
+[![Maintainability](https://api.codeclimate.com/v1/badges/2df0a76bfd865a387245/maintainability)](https://codeclimate.com/github/yurikrupnik/mussia5-next/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/2df0a76bfd865a387245/test_coverage)](https://codeclimate.com/github/yurikrupnik/mussia5-next/test_coverage)
+
 [![CodeScene general](https://codescene.io/images/analyzed-by-codescene-badge.svg)](https://codescene.io/projects/12553)
 
 [![DepShield Badge](https://depshield.sonatype.org/badges/yurikrupnik/mussia5-next/depshield.svg)](https://depshield.github.io)

@@ -19,7 +19,7 @@ function respondWithResult<T>(res: NextApiResponse) {
             // res.statusCode = 404;
             // res.statusMessage = "aris";
             // res.end();
-            res.status(200).json("");
+            res.status(200).json(null);
         } else {
             // console.log(entity);
             res.status(200).json(entity);
@@ -27,7 +27,7 @@ function respondWithResult<T>(res: NextApiResponse) {
     };
 }
 
-const list = <T extends mongoose.Model<Document>>(Model: T) => (req: NextApiRequest, res: NextApiResponse) => {
+const list = <T extends mongoose.Model<any>>(Model: T) => (req: NextApiRequest, res: NextApiResponse) => {
     Model.find(req.query).then(respondWithResult(res)).catch(handleError(res));
 };
 

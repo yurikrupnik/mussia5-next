@@ -56,6 +56,7 @@ export default (req: NextApiRequest, res: NextApiResponse) =>
                 // clientId: "453146d4f22a9dc52f30",
                 clientId: "Iv1.5b44de52edb0b343",
                 clientSecret: "a98d15f9f52a5adde9643d2decd95ec8cdc46bd0",
+                scope: "repo gist",
                 // clientSecret: "e2652da3b0fa1320b294ba4b35d979ccf52aff69",
             }),
             Providers.Google({
