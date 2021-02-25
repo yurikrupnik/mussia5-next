@@ -4,6 +4,9 @@ import Link from "next/link";
 import Button from "@material-ui/core/Button";
 import styles from "../styles/Home.module.css";
 
+const add = (a: number, b: number) => a + b;
+const adda = (a: number, b: number) => a + b;
+
 export default function Home() {
     return (
         <div className={styles.container}>
@@ -13,6 +16,9 @@ export default function Home() {
             </Head>
 
             <main className={styles.main}>
+                {add(1, 2)}
+                {adda(1, 2)}
+                <Button color="primary">Aros</Button>
                 <Button color="primary">Aros</Button>
                 <Link href="/dashboard">Go to dashbord</Link>
                 <h1 className={styles.title}>

@@ -189,13 +189,18 @@ const Login = () => {
                                                 Login
                                             </Button>
                                         </Grid>
-                                        <Button onClick={() => signin("google")}>signin google</Button>
-                                        <a href="/api/auth/google">
-                                            <Button>Google</Button>
-                                        </a>
-                                        <a href="/auth/bitbucket">
-                                            <Button>bitbucket</Button>
-                                        </a>
+                                        <Button onClick={() => signin("google")}>Google</Button>
+                                        <Button onClick={() => signin("github")}>Github</Button>
+                                        <Button onClick={() => signOut()}>Logout</Button>
+                                        {/*<a href="/api/auth/google">*/}
+                                        {/*    <Button>Google</Button>*/}
+                                        {/*</a>*/}
+                                        {/*<a href="/api/auth/github">*/}
+                                        {/*    <Button>Github</Button>*/}
+                                        {/*</a>*/}
+                                        {/*<a href="/auth/bitbucket">*/}
+                                        {/*    <Button>bitbucket</Button>*/}
+                                        {/*</a>*/}
                                     </Grid>
                                 </Form>
                             </Grid>
