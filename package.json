@@ -32,7 +32,7 @@
         "react": "17.0.1",
         "react-dom": "17.0.1",
         "react-use": "17.2.1",
-        "swr": "0.5.2",
+        "swr": "0.5.3",
         "yup": "0.32.9"
     },
     "devDependencies": {
