@@ -1,6 +1,6 @@
-import React from "react";
 import Head from "next/head";
 import Link from "next/link";
+import React from "react";
 import Button from "@material-ui/core/Button";
 import styles from "../styles/Home.module.css";
 
@@ -22,7 +22,7 @@ export default function Home() {
                 <Button color="primary">Aros</Button>
                 <Link href="/dashboard">Go to dashbord</Link>
                 <h1 className={styles.title}>
-                    Welcome to
+                    Hey guys
                     <a href="https://nextjs.org">Next.js!</a>
                 </h1>
 
