@@ -82,7 +82,7 @@ const Dashboard: React.FC<Props> = (props: Props) => {
             .catch((err) => {
                 console.log("err", err); // eslint-disable-line
             });
-        // fetch(`http://localhost:3000/api/hello`).then((a) => a.json());
+        // fetch(`http://localhost:3000/api/hello`).then((a) => a.json())6;
     });
     const { data } = props;
     return (
