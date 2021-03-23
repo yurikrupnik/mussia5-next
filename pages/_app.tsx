@@ -8,7 +8,7 @@ import CssBaseline from "@material-ui/core/CssBaseline";
 import theme from "../src/theme";
 import "../styles/globals.css";
 
-const MyApp = ({ Component, pageProps }: AppProps) => (
+const MyApp: React.FC<AppProps> = ({ Component, pageProps }: AppProps) => (
     <>
         <Head>
             <title>My page</title>
