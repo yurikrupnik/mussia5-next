@@ -12,25 +12,40 @@ module.exports = (phase) => {
 
     console.log(`isDev:${isDev}  isProd:${isProd}   isStaging:${isStaging}`); // eslint-disable-line
 
-    const env = {
-        RESTURL_SPEAKERS: (() => {
-            if (isDev) return "http://localhost:3000/api/";
-            if (isProd) {
-                return "https://mussia5-next.vercel.app/api";
-            }
-            if (isStaging) return "http://localhost:11639";
-            return "RESTURL_SPEAKERS:not (isDev,isProd && !isStaging,isProd && isStaging)";
-        })(),
-        // RESTURL_SESSIONS: (() => {
-        //     if (isDev) return 'http://localhost:4000/sessions'
-        //     if (isProd) return 'https://www.siliconvalley-codecamp.com/rest/sessions'
-        //     if (isStaging) return 'http://localhost:11639'
-        //     return 'RESTURL_SESSIONS:not (isDev,isProd && !isStaging,isProd && isStaging)'
-        // })(),
-    };
+    // const env = {
+    //     RESTURL_SPEAKERS: (() => {
+    //         if (isDev) return "http://localhost:3000/api/";
+    //         if (isProd) {
+    //             return "https://mussia5-next.vercel.app/api";
+    //         }
+    //         if (isStaging) return "http://localhost:11639";
+    //         return "RESTURL_SPEAKERS:not (isDev,isProd && !isStaging,isProd && isStaging)";
+    //     })(),
+    //     // RESTURL_SESSIONS: (() => {
+    //     //     if (isDev) return 'http://localhost:4000/sessions'
+    //     //     if (isProd) return 'https://www.siliconvalley-codecamp.com/rest/sessions'
+    //     //     if (isStaging) return 'http://localhost:11639'
+    //     //     return 'RESTURL_SESSIONS:not (isDev,isProd && !isStaging,isProd && isStaging)'
+    //     // })(),
+    // };
 
     // next.config.js object
     return {
-        env,
+        env: {
+            RESTURL_SPEAKERS: (() => {
+                if (isDev) return "http://localhost:3000/api/";
+                if (isProd) {
+                    return "https://mussia5-next.vercel.app/api";
+                }
+                if (isStaging) return "http://localhost:11639";
+                return "RESTURL_SPEAKERS:not (isDev,isProd && !isStaging,isProd && isStaging)";
+            })(),
+            // RESTURL_SESSIONS: (() => {
+            //     if (isDev) return 'http://localhost:4000/sessions'
+            //     if (isProd) return 'https://www.siliconvalley-codecamp.com/rest/sessions'
+            //     if (isStaging) return 'http://localhost:11639'
+            //     return 'RESTURL_SESSIONS:not (isDev,isProd && !isStaging,isProd && isStaging)'
+            // })(),
+        },
     };
 };
