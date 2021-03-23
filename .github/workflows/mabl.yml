@@ -13,8 +13,9 @@ jobs:
         id: mabl-test-deployment
         uses: mablhq/github-run-tests-action@v1
         env:
+#          MABL_API_KEY: ${{ secrets.MABL_API_KEY }}
           MABL_API_KEY: ${{ secrets.MABL_API_KEY }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          application-id: mussia5
-          environment-id: mussia5-env
+          application-id: zCkW6Mhrybz0kvGKVt0VLA-a
+          environment-id: HOg8AuD5iItWh6uOFnzQXg-e
