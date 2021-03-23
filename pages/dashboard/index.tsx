@@ -21,7 +21,7 @@ interface ItemProps {
     item: Data;
 }
 
-const Row = (props: ItemProps) => {
+const Row: React.FC<ItemProps> = (props: ItemProps) => {
     const { item } = props;
     // const router = useRouter();
 
@@ -48,7 +48,7 @@ const Row = (props: ItemProps) => {
     );
 };
 
-const Item = (props: ItemProps) => {
+const Item: React.FC<ItemProps> = (props: ItemProps) => {
     const { item } = props;
 
     return (
@@ -60,7 +60,7 @@ const Item = (props: ItemProps) => {
     );
 };
 
-const List = (props: Props) => {
+const List: React.FC<Props> = (props: Props) => {
     const { data } = props;
     return (
         <div>
@@ -71,7 +71,7 @@ const List = (props: Props) => {
     );
 };
 
-const Dashboard = (props: Props) => {
+const Dashboard: React.FC<Props> = (props: Props) => {
     useEffect(() => {
         axios
             .get(`/api/hello`)
