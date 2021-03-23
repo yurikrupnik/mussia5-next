@@ -73,9 +73,14 @@ const List = (props: Props) => {
 
 const Dashboard = (props: Props) => {
     useEffect(() => {
-        axios.get(`/api/hello`).then((r) => {
-            console.log("r", r); // eslint-disable-line
-        });
+        axios
+            .get(`/api/hello`)
+            .then((r) => {
+                console.log("r", r); // eslint-disable-line
+            })
+            .catch((err) => {
+                console.log("err", err); // eslint-disable-line
+            });
         // fetch(`http://localhost:3000/api/hello`).then((a) => a.json());
     });
     const { data } = props;
