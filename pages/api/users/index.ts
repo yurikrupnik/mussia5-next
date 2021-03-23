@@ -8,9 +8,15 @@ import Model from "../../../models/User";
 const handler = nc().use(all);
 
 handler.get((req: NextApiRequest, res: NextApiResponse) => {
-    Model.find().then((resp) => {
-        res.json(resp);
-    });
+    Model.find()
+        .then((resp) => {
+            res.statusCode = 200;
+            res.json(resp);
+        })
+        .catch((err) => {
+            res.statusCode = 500;
+            res.json(err.message);
+        });
     // res.json({ status: "ok" });
 });
 
