@@ -3,12 +3,15 @@ import { NextApiRequest, NextApiResponse } from "next";
 import { all } from "../../../middlewares";
 // import { create, list, update } from "../../../utils/methods";
 
-// import Model from "../../../models/User";
+import Model from "../../../models/User";
 
 const handler = nc().use(all);
 
 handler.get((req: NextApiRequest, res: NextApiResponse) => {
-    res.json({ status: "ok" });
+    Model.find().then((resp) => {
+        res.json(resp);
+    });
+    // res.json({ status: "ok" });
 });
 
 // handler.get(list(Model));

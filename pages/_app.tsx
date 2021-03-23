@@ -1,12 +1,12 @@
-import "../styles/globals.css";
 import { AppProps } from "next/app";
 import React from "react";
 import { Provider } from "next-auth/client";
 import Head from "next/head";
 import { ThemeProvider } from "@material-ui/core/styles";
 import CssBaseline from "@material-ui/core/CssBaseline";
-import Header from "@/components/Header";
+// import Header from "@/components/Header";
 import theme from "../src/theme";
+import "../styles/globals.css";
 
 const MyApp = ({ Component, pageProps }: AppProps) => (
     <>
@@ -18,7 +18,7 @@ const MyApp = ({ Component, pageProps }: AppProps) => (
             <ThemeProvider theme={theme}>
                 <CssBaseline />
                 {/*<header>jeader jere</header>*/}
-                <Header />
+                {/*<Header />*/}
                 {/* eslint-disable-next-line */}
                 <Component {...pageProps} />
             </ThemeProvider>
