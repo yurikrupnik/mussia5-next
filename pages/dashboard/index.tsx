@@ -112,10 +112,15 @@ export async function getServerSideProps(ctx: NextPageContext) {
 
     const url = `${http}://${host}/api/users`;
     console.log({ url }); // eslint-disable-line
-    const data = await axios.get(url).then((users) => {
-        console.log("users", users.data); // eslint-disable-line
-        return users.data;
-    });
+    const data = await axios
+        .get(url)
+        .then((users) => {
+            console.log("users", users.data); // eslint-disable-line
+            return users.data;
+        })
+        .catch((err) => {
+            console.log("err", err); // eslint-disable-line
+        });
     // const res = await axios.get(`/api/users`);
     // const data = await res.json();
     // const data = [];
