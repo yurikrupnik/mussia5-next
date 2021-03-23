@@ -5,7 +5,7 @@ import connectDb from "../../middlewares/db";
 
 // connectDb();
 function onError(err, req, res, next) {
-    console.log(err); // eslint disable-line
+    // console.log(err); // eslint disable-line
 
     res.status(500).end(err.toString());
     // OR: you may want to continue
@@ -13,7 +13,7 @@ function onError(err, req, res, next) {
 }
 
 function onNoMatch(req, res) {
-    console.log("req", req); // eslint disable-line
+    // console.log("req", req); // eslint disable-line
     res.status(404).end("page is not found... or is it");
 }
 

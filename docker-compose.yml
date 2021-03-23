@@ -5,10 +5,10 @@ services:
         ports:
             - 27017:27017
     web:
-        image: rt-react
+        image: mussia5-next-ui
         build:
             context: .
-        container_name: web
+        container_name: mussia5-next-ui
         environment:
             - NODE_ENV_DOCKER=true
             - DB_USER=admin
@@ -22,29 +22,30 @@ services:
 #            - 4001:4001
 #            - 7000:7000
 #            - 7070:7070
-        volumes:
-            - ./src:/usr/app/src
-        command: npm run dev
-    web1:
-        image: rt-react1
-        build:
-            context: .
-        container_name: web1
-        environment:
-            - NODE_ENV_DOCKER=true
-            - DB_USER=admin
-            # dev db
-            - DB_PASSWORD=elmtmVSesRtpz3de
-            - DATABASE_URL=@cluster0.xliif.gcp.mongodb.net/
-        # local db
-        #            - DATABASE_URL=mongodb://db/rt-react
-        ports:
-            - 3000:3000
-#            - 4001:4001
-#            - 7000:7000
-#            - 7070:7070
-        volumes:
-            - ./src:/usr/app/src
-        command: npm run dev
+#        volumes:
+#            - ./src:/usr/app/src
+#        command: npm run dev
+        command: npm run start
+#    web1:
+#        image: rt-react1
+#        build:
+#            context: .
+#        container_name: web1
+#        environment:
+#            - NODE_ENV_DOCKER=true
+#            - DB_USER=admin
+#            # dev db
+#            - DB_PASSWORD=elmtmVSesRtpz3de
+#            - DATABASE_URL=@cluster0.xliif.gcp.mongodb.net/
+#        # local db
+#        #            - DATABASE_URL=mongodb://db/rt-react
+#        ports:
+#            - 3000:3000
+##            - 4001:4001
+##            - 7000:7000
+##            - 7070:7070
+#        volumes:
+#            - ./src:/usr/app/src
+#        command: npm run dev
 #        depends_on:
 #            - db
