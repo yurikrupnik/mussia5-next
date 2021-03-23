@@ -33,9 +33,10 @@ module.exports = (phase) => {
     return {
         env: {
             RESTURL_SPEAKERS: (() => {
-                if (isDev) return "http://localhost:3000/api/";
+                if (isDev) return `${process.env.NEXT_PUBLIC_VERCEL_URL}/api/`;
+                // if (isDev) return "http://localhost:3000/api/";
                 if (isProd) {
-                    return "https://mussia5-next.vercel.app/api";
+                    return `${process.env.NEXT_PUBLIC_VERCEL_URL}/api`;
                 }
                 if (isStaging) return "http://localhost:11639";
                 return "RESTURL_SPEAKERS:not (isDev,isProd && !isStaging,isProd && isStaging)";

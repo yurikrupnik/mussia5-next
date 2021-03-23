@@ -99,9 +99,11 @@ export async function getServerSideProps(ctx: NextPageContext) {
     // console.log("ctx", ctx.request);
     console.log("NEXT_PUBLIC_VERCEL_URL", process.env.NEXT_PUBLIC_VERCEL_URL); // eslint-disable-line
     console.log("RESTURL_SPEAKERS", process.env.RESTURL_SPEAKERS); // eslint-disable-line
-    console.log("procc", process.env.hostname); // eslint-disable-line
+    console.log("hostname", process.env.hostname); // eslint-disable-line
     console.log("NODE_ENV", process.env.NODE_ENV); // eslint-disable-line
-    console.log("procc", process.env.HOSTNAME); // eslint-disable-line
+    console.log("HOSTNAME", process.env.HOSTNAME); // eslint-disable-line
+    console.log("NEXT_PUBLIC_VERCEL_URL", process.env.NEXT_PUBLIC_VERCEL_URL); // eslint-disable-line
+    console.log("VERCEL_URL", process.env.VERCEL_URL); // eslint-disable-line
 
     let host = "localhost:3000";
     if (ctx.req) {
