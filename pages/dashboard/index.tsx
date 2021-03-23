@@ -74,9 +74,10 @@ const List: React.FC<Props> = (props: Props) => {
 const Dashboard: React.FC<Props> = (props: Props) => {
     useEffect(() => {
         axios
-            .get(`/api/hello`)
+            .get("/api/hello")
             .then((r) => {
                 console.log("r", r); // eslint-disable-line
+                return r.data;
             })
             .catch((err) => {
                 console.log("err", err); // eslint-disable-line
