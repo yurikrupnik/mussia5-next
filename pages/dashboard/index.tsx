@@ -74,7 +74,7 @@ const List = (props: Props) => {
 const Dashboard = (props: Props) => {
     useEffect(() => {
         axios.get(`/api/hello`).then((r) => {
-            console.log("r", r);
+            console.log("r", r); // eslint-disable-line
         });
         // fetch(`http://localhost:3000/api/hello`).then((a) => a.json());
     });
@@ -90,13 +90,12 @@ const Dashboard = (props: Props) => {
     );
 };
 
-// eslint-disable-next-line
 export async function getServerSideProps(ctx: NextPageContext) {
     // console.log("ctx", ctx.request);
-    console.log("RESTURL_SPEAKERS", process.env.RESTURL_SPEAKERS);
-    console.log("procc", process.env.hostname);
-    console.log("NODE_ENV", process.env.NODE_ENV);
-    console.log("procc", process.env.HOSTNAME);
+    console.log("RESTURL_SPEAKERS", process.env.RESTURL_SPEAKERS); // eslint-disable-line
+    console.log("procc", process.env.hostname); // eslint-disable-line
+    console.log("NODE_ENV", process.env.NODE_ENV); // eslint-disable-line
+    console.log("procc", process.env.HOSTNAME); // eslint-disable-line
 
     let host = "localhost:3000";
     if (ctx.req) {
@@ -106,9 +105,9 @@ export async function getServerSideProps(ctx: NextPageContext) {
     const http = host.includes("localhost") ? "http" : "https";
 
     const url = `${http}://${host}/api/users`;
-    console.log({ url });
+    console.log({ url }); // eslint-disable-line
     const data = await axios.get(url).then((users) => {
-        console.log("users", users.data);
+        console.log("users", users.data); // eslint-disable-line
         return users.data;
     });
     // const res = await axios.get(`/api/users`);
