@@ -10,7 +10,7 @@ module.exports = (phase) => {
     // when `next build` or `npm run build` is used
     const isStaging = phase === PHASE_PRODUCTION_BUILD && process.env.STAGING === "1";
 
-    console.log(`isDev:${isDev}  isProd:${isProd}   isStaging:${isStaging}`);
+    console.log(`isDev:${isDev}  isProd:${isProd}   isStaging:${isStaging}`); // eslint-disable-line
 
     const env = {
         RESTURL_SPEAKERS: (() => {
