@@ -18,8 +18,8 @@ async function prot(req: NextApiRequest, res: NextApiResponse, next: () => void)
         // res.end();
     }
     // Not Signed in hi
-    // res.status(401);
-    res.statusCode = 401;
+    res.status(401);
+    // res.statusCode = 401;
     // return res.json({ omg: "yes" });
     // res.send("Status Code: 401 Unauthorized\n");
 
