@@ -8,36 +8,48 @@ import { NextApiRequest, NextApiResponse } from "next";
 import connectDb from "@/middlewares/db";
 // import session from "@/middlewares/session";
 
-async function prot(req: NextApiRequest, res: NextApiResponse, next: () => void) {
-    const session = await getSession({ req });
-    if (session) {
-        // Signed in
-        console.log("Session", JSON.stringify(session, null, 2)); // eslint-disable-line
-        return next();
-        // res.end();
-    }
-    // Not Signed in
-    res.status(401);
-    // res.statusCode = 401;
-    // res.json({ omg: "yes" });
-
-    return res.end();
-}
-
-// const prot = (req: NextApiRequest, res: NextApiResponse, next: () => void) =>
-//     getSession({ req })
-//         .then((session) => {
-//             console.log("Session", JSON.stringify(session, null, 2)); // eslint-disable-line
-//             return next();
-//         })
-//         .catch((err) => {
-//             res.status(401);
-//             console.log(err);
-//             // res.statusCode = 401;
-//             // res.json({ omg: "yes" });
+// async function prot(req: NextApiRequest, res: NextApiResponse, next: () => void) {
+//     const session = await getSession({ req });
+//     if (session) {
+//         // Signed in
+//         console.log("Session", JSON.stringify(session, null, 2)); // eslint-disable-line
+//         return next();
+//         // res.end();
+//     }
+//     // Not Signed in
+//     res.status(401);
+//     // res.statusCode = 401;
+//     // res.json({ omg: "yes" });
 //
-//             res.end();
-//         });
+//     return res.end();
+// }
+
+const prot = (req: NextApiRequest, res: NextApiResponse, next: () => void) =>
+    getSession({ req })
+        .then((session) => {
+            if (session) {
+                // Signed in
+                console.log("Session", JSON.stringify(session, null, 2)); // eslint-disable-line
+                return next();
+                // res.end();
+            }
+            // console.log("Session", JSON.stringify(session, null, 2)); // eslint-disable-line
+            // return next();
+            res.status(401);
+            // console.log(err);
+            // res.statusCode = 401;
+            // res.json({ omg: "yes" });
+
+            res.end();
+        })
+        .catch((err) => {
+            res.status(401);
+            console.log(err);
+            // res.statusCode = 401;
+            // res.json({ omg: "yes" });
+
+            res.end();
+        });
 
 // eslint-disable-next-line
 const handler = nc().use(morgan("dev")).use(helmet()).use(cookieParser()).use(connectDb).use(prot);
