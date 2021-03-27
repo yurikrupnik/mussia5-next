@@ -24,27 +24,29 @@ import connectDb from "@/middlewares/db";
 //     return res.end();
 // }
 
+const handleUnAuth = (res: NextApiResponse, next: () => void) => (session: unknown) => {
+    if (session) {
+        // Signed in
+        console.log("Session", JSON.stringify(session, null, 2)); // eslint-disable-line
+        return next();
+        // res.end();
+    }
+    // console.log("Session", JSON.stringify(session, null, 2)); // eslint-disable-line
+    // return next();
+    return res.status(401).end();
+    // console.log(err);
+    // res.statusCode = 401;
+    // res.json({ omg: "yes" });
+
+    // res.end();
+};
+
 const prot = (req: NextApiRequest, res: NextApiResponse, next: () => void) =>
     getSession({ req })
-        .then((session) => {
-            if (session) {
-                // Signed in
-                console.log("Session", JSON.stringify(session, null, 2)); // eslint-disable-line
-                return next();
-                // res.end();
-            }
-            // console.log("Session", JSON.stringify(session, null, 2)); // eslint-disable-line
-            // return next();
-            res.status(401);
-            // console.log(err);
-            // res.statusCode = 401;
-            // res.json({ omg: "yes" });
-
-            res.end();
-        })
+        .then(handleUnAuth(res, next))
         .catch((err) => {
             res.status(401);
-            console.log(err);
+            console.log(err); // eslint-disable-line
             // res.statusCode = 401;
             // res.json({ omg: "yes" });
 
