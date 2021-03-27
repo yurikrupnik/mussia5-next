@@ -6,44 +6,44 @@ import cookieParser from "cookie-parser";
 import { getSession } from "next-auth/client";
 import { NextApiRequest, NextApiResponse } from "next";
 import connectDb from "@/middlewares/db";
+import type { Session } from "next-auth";
 // import session from "@/middlewares/session";
 
-// async function prot(req: NextApiRequest, res: NextApiResponse, next: () => void) {
-//     const session = await getSession({ req });
-//     if (session) {
-//         // Signed in
-//         console.log("Session", JSON.stringify(session, null, 2)); // eslint-disable-line
-//         return next();
-//         // res.end();
-//     }
-//     // Not Signed in
-//     res.status(401);
-//     // res.statusCode = 401;
-//     // res.json({ omg: "yes" });
-//
-//     return res.end();
-// }
-
-const handleUnAuth = (res: NextApiResponse, next: () => void) => (session: unknown) => {
+async function prot(req: NextApiRequest, res: NextApiResponse, next: () => void) {
+    const session: Session | null = await getSession({ req });
     if (session) {
         // Signed in
         console.log("Session", JSON.stringify(session, null, 2)); // eslint-disable-line
         return next();
         // res.end();
     }
-    // console.log("Session", JSON.stringify(session, null, 2)); // eslint-disable-line
-    // return next();
-    res.statusCode = 401;
-    return res.end();
-    // console.log(err);
+    // Not Signed in
+    res.status(401);
     // res.statusCode = 401;
     // res.json({ omg: "yes" });
 
-    // res.end();
-};
+    return res.end();
+}
 
-const prot = (req: NextApiRequest, res: NextApiResponse, next: () => void) =>
-    getSession({ req }).then(handleUnAuth(res, next));
+// const handleUnAuth = (res: NextApiResponse) => (session: Session | null) => {
+//     if (session) {
+//         // Signed in
+//         console.log("Session", JSON.stringify(session, null, 2)); // eslint-disable-line
+//         // return next();
+//         // res.end();
+//     }
+//     // console.log("Session", JSON.stringify(session, null, 2)); // eslint-disable-line
+//     // return next();
+//     res.statusCode = 401;
+//     return res.end();
+//     // console.log(err);
+//     // res.statusCode = 401;
+//     // res.json({ omg: "yes" });
+//
+//     // res.end();
+// };
+
+// const prot = (ctx: NextPageContext) => getSession(ctx).then(handleUnAuth(ctx.res));
 // .catch((err) => {
 //     // res.status(401);
 //     console.log(err); // eslint-disable-line
