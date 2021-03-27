@@ -18,11 +18,12 @@ async function prot(req: NextApiRequest, res: NextApiResponse, next: () => void)
         // res.end();
     }
     // Not Signed in
-    res.status(401);
-    // res.statusCode = 401;
-    // res.json({ omg: "yes" });
+    // res.status(401);
+    res.statusCode = 401;
+    return res.json({ omg: "yes" });
+    // res.send({})
 
-    return res.end();
+    // return res.end();
 }
 
 // const handleUnAuth = (res: NextApiResponse) => (session: Session | null) => {
