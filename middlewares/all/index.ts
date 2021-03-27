@@ -20,10 +20,10 @@ async function prot(req: NextApiRequest, res: NextApiResponse, next: () => void)
     // Not Signed in hi
     // res.status(401);
     res.statusCode = 401;
-    return res.json({ omg: "yes" });
+    // return res.json({ omg: "yes" });
     // res.send("Status Code: 401 Unauthorized\n");
 
-    // return res.end();
+    return res.end();
 }
 
 // const handleUnAuth = (res: NextApiResponse) => (session: Session | null) => {
