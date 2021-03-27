@@ -33,7 +33,8 @@ const handleUnAuth = (res: NextApiResponse, next: () => void) => (session: unkno
     }
     // console.log("Session", JSON.stringify(session, null, 2)); // eslint-disable-line
     // return next();
-    return res.status(401).end();
+    res.statusCode = 401;
+    return res.end();
     // console.log(err);
     // res.statusCode = 401;
     // res.json({ omg: "yes" });
@@ -42,16 +43,15 @@ const handleUnAuth = (res: NextApiResponse, next: () => void) => (session: unkno
 };
 
 const prot = (req: NextApiRequest, res: NextApiResponse, next: () => void) =>
-    getSession({ req })
-        .then(handleUnAuth(res, next))
-        .catch((err) => {
-            res.status(401);
-            console.log(err); // eslint-disable-line
-            // res.statusCode = 401;
-            // res.json({ omg: "yes" });
-
-            res.end();
-        });
+    getSession({ req }).then(handleUnAuth(res, next));
+// .catch((err) => {
+//     // res.status(401);
+//     console.log(err); // eslint-disable-line
+//     res.statusCode = 401;
+//     // res.json({ omg: "yes" });
+//
+//     res.end();
+// });
 
 // eslint-disable-next-line
 const handler = nc().use(morgan("dev")).use(helmet()).use(cookieParser()).use(connectDb).use(prot);
