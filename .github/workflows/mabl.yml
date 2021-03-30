@@ -27,7 +27,7 @@ jobs:
       - run: echo "${{ steps.deployment.outputs.url }}"
   test:
     needs: [wait-for-vercel-deployment]
-    name: mabl Test da
+    name: mabl Test
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
