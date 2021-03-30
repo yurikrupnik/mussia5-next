@@ -11,7 +11,8 @@ jobs:
         env:
           VERCEL_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          deployment-url: https://mussia5-next.vercel.app # TODO Replace by the domain you want to test
+          deployment-url: ${{ env.VERCEL_DEPLOYMENT_URL }}
+          # TODO Replace by the domain you want to test
           timeout: 10 # Wait for 10 seconds before failing2
 
       - name: Display deployment status
