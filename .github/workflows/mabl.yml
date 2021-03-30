@@ -22,7 +22,7 @@ jobs:
       - uses: SFDigitalServices/wait-for-deployment-action@v1
         id: deployment
         with:
-          token: ${{ secrets.VERCEL_TOKEN  }}
+          token: ${{ secrets.GITHUB_TOKEN }}
           environment: Preview
       - run: echo "${{ steps.deployment.outputs.url }}"
 #  test:
