@@ -11,22 +11,22 @@ jobs:
         env:
           VERCEL_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          deployment-url: https://mussia5-next.vercel.app/ # TODO Replace by the domain you want to test
+          deployment-url: https://mussia5-next.vercel.app # TODO Replace by the domain you want to test
           timeout: 10 # Wait for 10 seconds before failing2
 
       - name: Display deployment status
         run: "echo The deployment at ${{ fromJson(steps.await-vercel.outputs.deploymentDetails).url }} is ${{ fromJson(steps.await-vercel.outputs.deploymentDetails).readyState }}"
-  test1:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: SFDigitalServices/wait-for-deployment-action@v1
-        id: deployment
-        env:
-          TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          environment: Preview
-      - run: echo "${{ steps.deployment.outputs.url }}"
+#  test1:
+#    runs-on: ubuntu-latest
+#    steps:
+#      - uses: SFDigitalServices/wait-for-deployment-action@v1
+#        id: deployment
+#        env:
+#          TOKEN: ${{ secrets.GITHUB_TOKEN }}
+#        with:
+#          token: ${{ secrets.GITHUB_TOKEN }}
+#          environment: Preview
+#      - run: echo "${{ steps.deployment.outputs.url }}"
 #  test:
 #    needs: [wait-for-vercel-deployment]
 #    name: mabl Test
