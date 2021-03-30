@@ -43,7 +43,7 @@ jobs:
           path: "./coverage/lcov.info"
           min_coverage: 80
           exclude: "**/*_observer.dart **/change.dart"
-      - run: npm run build
+#      - run: npm run build
 
 #steps:
 #  - uses: actions/checkout@master
