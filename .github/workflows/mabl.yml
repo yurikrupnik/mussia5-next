@@ -3,7 +3,30 @@ on: [push]
 name: mabl
 
 jobs:
+  wait-for-vercel-deployment:
+    runs-on: ubuntu-18.04
+    steps:
+      - uses: UnlyEd/github-action-await-vercel@v1.1.0
+        id: await-vercel
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+        with:
+          deployment-url: mussia5-next.vercel.app # TODO Replace by the domain you want to test
+          timeout: 10 # Wait for 10 seconds before failing
+
+      - name: Display deployment status
+        run: "echo The deployment at ${{ fromJson(steps.await-vercel.outputs.deploymentDetails).url }} is ${{ fromJson(steps.await-vercel.outputs.deploymentDetails).readyState }}"
+  test1:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: SFDigitalServices/wait-for-deployment-action@v1
+        id: deployment
+        with:
+          token: ${{ github.token }}
+          environment: Preview
+      - run: echo "${{ steps.deployment.outputs.url }}"
   test:
+    needs: [wait-for-vercel-deployment]
     name: mabl Test da
     runs-on: ubuntu-latest
     steps:
