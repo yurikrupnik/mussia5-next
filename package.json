@@ -10,7 +10,7 @@
         "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
         "test": "jest . --colors"
     },
-    "node": ">=12.0.0",
+    "node": ">=14.0.0",
     "dependencies": {
         "@google-cloud/secret-manager": "3.5.0",
         "@material-ui/core": "4.11.3",
@@ -49,6 +49,7 @@
         "@typescript-eslint/parser": "4.19.0",
         "eslint": "7.23.0",
         "eslint-config-airbnb": "18.2.1",
+        "eslint-config-stylelint": "^13.1.0",
         "eslint-import-resolver-typescript": "2.4.0",
         "eslint-plugin-import": "2.22.1",
         "eslint-plugin-jsx-a11y": "6.4.1",
