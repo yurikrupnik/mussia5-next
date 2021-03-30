@@ -4,7 +4,7 @@ name: mabl
 
 jobs:
   test:
-    name: mabl Test
+    name: mabl Test da
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
