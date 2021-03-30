@@ -21,6 +21,8 @@ jobs:
     steps:
       - uses: SFDigitalServices/wait-for-deployment-action@v1
         id: deployment
+        env:
+          TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           environment: Preview
