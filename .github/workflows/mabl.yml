@@ -9,7 +9,7 @@ jobs:
       - uses: UnlyEd/github-action-await-vercel@v1.1.0
         id: await-vercel
         env:
-          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+          VERCEL_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           deployment-url: https://mussia5-next.vercel.app/ # TODO Replace by the domain you want to test
           timeout: 10 # Wait for 10 seconds before failing2
