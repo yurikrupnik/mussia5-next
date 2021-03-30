@@ -10,9 +10,9 @@ jobs:
         id: await-vercel
         env:
           VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
-#        with:
-#          deployment-url: mussia5-next.vercel.app # TODO Replace by the domain you want to test
-#          timeout: 10 # Wait for 10 seconds before failing
+        with:
+          deployment-url: https://mussia5-next.vercel.app/ # TODO Replace by the domain you want to test
+          timeout: 10 # Wait for 10 seconds before failing
 
       - name: Display deployment status
         run: "echo The deployment at ${{ fromJson(steps.await-vercel.outputs.deploymentDetails).url }} is ${{ fromJson(steps.await-vercel.outputs.deploymentDetails).readyState }}"
@@ -25,21 +25,22 @@ jobs:
           token: ${{ secrets.VERCEL_TOKEN  }}
           environment: Preview
       - run: echo "${{ steps.deployment.outputs.url }}"
-  test:
-    needs: [wait-for-vercel-deployment]
-    name: mabl Test
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - name: Functional test deployment
-        id: mabl-test-deployment
-        uses: mablhq/github-run-tests-action@v1
-        env:
-          MABL_API_KEY: ${{ secrets.MABL_API_KEY }}
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          application-id: zCkW6Mhrybz0kvGKVt0VLA-a
-          environment-id: HOg8AuD5iItWh6uOFnzQXg-e
+#  test:
+#    needs: [wait-for-vercel-deployment]
+#    name: mabl Test
+#    runs-on: ubuntu-latest
+#    steps:
+#      - uses: actions/checkout@v2
+#      - name: Functional test deployment
+#        id: mabl-test-deployment
+#        uses: mablhq/github-run-tests-action@v1
+#        env:
+#          MABL_API_KEY: ${{ secrets.MABL_API_KEY }}
+#          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+#        with:
+#          application-id: zCkW6Mhrybz0kvGKVt0VLA-a
+#          environment-id: HOg8AuD5iItWh6uOFnzQXg-e
+
 #      - name: Get branch name (merge)
 #        if: github.event_name != 'pull_request'
 #        shell: bash
