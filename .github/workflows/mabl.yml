@@ -29,7 +29,7 @@ jobs:
 #          environment: Preview
 #      - run: echo "${{ steps.deployment.outputs.url }}"
   test:
-    needs: [wait-for-vercel-deployment]
+#    needs: [wait-for-vercel-deployment]
     name: mabl Test
     runs-on: ubuntu-latest
     steps:
