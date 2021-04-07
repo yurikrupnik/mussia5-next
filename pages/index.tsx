@@ -17,6 +17,8 @@ const Home: React.FC = () => (
                 <a href="https://nextjs.org">Next.js!</a>
             </h1>
 
+            <h2 style={{ color: "red" }}>And enjoy</h2>
+
             <p className={styles.description}>
                 Get started by editing
                 <code className={styles.code}>pages/index.js</code>
