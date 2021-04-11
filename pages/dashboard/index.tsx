@@ -1,10 +1,11 @@
-import React, { useCallback, useEffect } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import Paper from "@material-ui/core/Paper";
 import Grid from "@material-ui/core/Grid";
 import Container from "@material-ui/core/Container";
 import Typography from "@material-ui/core/Typography";
 import { NextPageContext } from "next";
 import axios from "axios";
+import Model from "../../models/User";
 
 interface Data {
     name: string;
@@ -72,39 +73,67 @@ const List: React.FC<Props> = (props: Props) => {
 };
 
 const Dashboard: React.FC<Props> = (props: Props) => {
+    const { data: myD } = props;
+    const [data, setData] = useState([]);
+    console.log("data", data); // eslint-disable-line
+    console.log("zmyD", myD); // eslint-disable-line
     useEffect(() => {
         axios
-            .get("/api/hello")
-            .then((r) => {
-                console.log("r", r); // eslint-disable-line
-                return r.data;
+            .get("/api/users", {
+                headers: {
+                    "Some-custom-header": "omg",
+                    "Local-header": "Some value",
+                },
+            })
+            .then((users) => {
+                console.log("users", users.data); // eslint-disable-line
+                setData(users.data);
+                return users.data;
             })
             .catch((err) => {
                 console.log("err", err); // eslint-disable-line
             });
+        // axios
+        //     .get("/api/hello")
+        //     .then((r) => {
+        //         console.log("r", r); // eslint-disable-line
+        //         return r.data;
+        //     })
+        //     .catch((err) => {
+        //         console.log("err", err); // eslint-disable-line
+        //     });
         // fetch(`http://localhost:3000/api/hello`).then((a) => a.json())6;
-    });
-    const { data } = props;
+    }, []);
+    // const { data } = props;
     return (
         <Container>
             <Typography align="center" variant="h5">
                 Dashboard
             </Typography>
             <h2>Users</h2>
-            <List data={data} />
+            <List data={myD} />
         </Container>
     );
 };
 
+// export async function getStaticProps(ctx: NextPageContext) {
+//     // console.log("ctx", ctx);
+//     // const data = await Model.find().lean();
+//     // console.log("getsStaticProps data", data);
+//     return {
+//         props: { data: [] },
+//     };
+// }
+
 export async function getServerSideProps(ctx: NextPageContext) {
     // console.log("ctx", ctx.request);
-    console.log("NEXT_PUBLIC_VERCEL_URL", process.env.NEXT_PUBLIC_VERCEL_URL); // eslint-disable-line
-    console.log("RESTURL_SPEAKERS", process.env.RESTURL_SPEAKERS); // eslint-disable-line
-    console.log("hostname", process.env.hostname); // eslint-disable-line
-    console.log("NODE_ENV", process.env.NODE_ENV); // eslint-disable-line
-    console.log("HOSTNAME", process.env.HOSTNAME); // eslint-disable-line
-    console.log("NEXT_PUBLIC_VERCEL_URL", process.env.NEXT_PUBLIC_VERCEL_URL); // eslint-disable-line
-    console.log("VERCEL_URL", process.env.VERCEL_URL); // eslint-disable-line
+    // console.log("NEXT_PUBLIC_VERCEL_URL", process.env.NEXT_PUBLIC_VERCEL_URL); // eslint-disable-line
+    // console.log("RESTURL_SPEAKERS", process.env.RESTURL_SPEAKERS); // eslint-disable-line
+    // console.log("hostname", process.env.hostname); // eslint-disable-line
+    // console.log("NODE_ENV", process.env.NODE_ENV); // eslint-disable-line
+    // console.log("HOSTNAME", process.env.HOSTNAME); // eslint-disable-line
+    // console.log("NEXT_PUBLIC_VERCEL_URL", process.env.NEXT_PUBLIC_VERCEL_URL); // eslint-disable-line
+    // console.log("VERCEL_URL", process.env.VERCEL_URL); // eslint-disable-line
 
     let host = "localhost:3000";
     if (ctx.req) {
@@ -115,12 +144,40 @@ export async function getServerSideProps(ctx: NextPageContext) {
 
     const url = `${http}://${host}/api/users`;
     console.log({ url }); // eslint-disable-line
+    // const data = await Model.find().lean();
+
+    // return Model.find()
+    //     .lean()
+    //     .then((data) => {
+    //         console.log("getServerSideProps data", data); // eslint-disable-line
+    //         if (!data) {
+    //             return {
+    //                 notFound: true,
+    //             };
+    //         }
+    //         return {
+    //             props: { data },
+    //         };
+    //     })
+    //     .catch((err) => {
+    //         console.log("err", err);
+    //         return {
+    //             props: {
+    //                 data: [],
+    //             },
+    //         };
+    //     });
     const data = await axios
-        .get(url)
-        .then((users) => {
-            console.log("users", users.data); // eslint-disable-line
-            return users.data;
+        .get(url, {
+            headers: {
+                aris: "some aris",
+            },
         })
+        .then(
+            (users) =>
+                // console.log("users", users.data); // eslint-disable-line
+                users.data
+        )
         .catch((err) => {
             console.log("err", err); // eslint-disable-line
         });

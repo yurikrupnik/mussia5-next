@@ -7,8 +7,23 @@ import Model from "../../../models/User";
 
 const handler = nc().use(all);
 
+function getUsers() {
+    return Model.find();
+    // .then((resp) => {
+    //     res.statusCode = 200;
+    //     res.json(resp);
+    // })
+    // .catch((err) => {
+    //     res.statusCode = 500;
+    //     res.json(err.message);
+    // });
+}
+
 handler.get((req: NextApiRequest, res: NextApiResponse) => {
-    Model.find()
+    console.log("req.query", req.query); // eslint-disable-line
+    console.log("req.headers", req.headers); // eslint-disable-line
+    getUsers()
+        // Model.find()
         .then((resp) => {
             res.statusCode = 200;
             res.json(resp);
