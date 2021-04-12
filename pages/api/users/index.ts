@@ -20,8 +20,8 @@ function getUsers() {
 }
 
 handler.get((req: NextApiRequest, res: NextApiResponse) => {
-    console.log("req.query", req.query); // eslint-disable-line
-    console.log("req.headers", req.headers); // eslint-disable-line
+    // console.log("req.query", req.query); // eslint-disable-line
+    // console.log("req.headers", req.headers); // eslint-disable-line
     getUsers()
         // Model.find()
         .then((resp) => {

@@ -24,6 +24,7 @@ import Hidden from "@material-ui/core/Hidden";
 import { useRouter } from "next/router";
 // import TextField from "@/components/FormField"; // todo fix eslint
 import useSWR from "swr";
+import { useUser } from "@auth0/nextjs-auth0";
 import TextField from "../../components/FormField";
 import fetcher from "../../src/fetch";
 // import { Context as Projects } from "../../api/projects/context";
@@ -37,10 +38,12 @@ import fetcher from "../../src/fetch";
 const logo = "";
 const logoBlack = "";
 const Login = () => {
-    const [session] = useSession();
+    const [session] = [{}];
+    // const [session] = useSession();
     console.log("session", session);
     // console.log("loading", loading);
-
+    const user = useUser();
+    console.log("user", user);
     const { data, mutate } = useSWR("/api/users", fetcher);
     console.log("{ data, mutate }", { data, mutate }); // eslint-disable-line
     // const classes = loginStyles();
@@ -191,8 +194,10 @@ const Login = () => {
                                         </Grid>
                                         <Button onClick={() => signin("google")}>Google</Button>
                                         <Button onClick={() => signin("github")}>Github</Button>
+                                        <Button onClick={() => signin("auth0")}>Auth0</Button>
                                         <Button onClick={() => signOut()}>Logout</Button>
-                                        {/*<a href="/api/auth/google">*/}
+                                        <a href="/api/auth/login">Login</a>;{/*<a href="/api/auth/google">*/}
+                                        <a href="/api/auth/logout">logout</a>;{/*<a href="/api/auth/google">*/}
                                         {/*    <Button>Google</Button>*/}
                                         {/*</a>*/}
                                         {/*<a href="/api/auth/github">*/}
