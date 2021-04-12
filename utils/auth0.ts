@@ -12,7 +12,7 @@ export default initAuth0({
     // // issuerBaseURL: "http://localhost:3000",;
     // session: {
     //     cookie: {
-    //         // aris: "aris",
+    //         // aris: "a45ris",
     //     },
     // },
 });
