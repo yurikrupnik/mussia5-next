@@ -7,7 +7,7 @@ export default withApiAuthRequired(async (req, res) => {
         // scopes: ["read:products"],
     });
 
-    console.log("accessToken", accessToken);
+    console.log("accessToken", accessToken); // eslint-disable-line
 
     // const response = await fetch("https://api.example.com/products", {
     //     headers: {
