@@ -1,6 +1,6 @@
 import { AppProps } from "next/app";
 import React from "react";
-import { Provider } from "next-auth/client";
+// import { Provider } from "next-auth/client";
 import Head from "next/head";
 import { ThemeProvider } from "@material-ui/core/styles";
 import CssBaseline from "@material-ui/core/CssBaseline";
@@ -11,7 +11,7 @@ import "../styles/globals.css";
 
 const MyApp: React.FC<AppProps> = ({ Component, pageProps }: AppProps) => {
     const { user } = pageProps;
-    console.log("useruser", user);
+    console.log("useruser", user); // eslint-disable-line
     return (
         <>
             <Head>
