@@ -55,6 +55,13 @@ export default (req: NextApiRequest, res: NextApiResponse) =>
                 maxAge: 50000,
                 // server: "",
             }),
+            // Providers.Auth0({
+            //     clientId: "MHyx1Bc0QTqwIg0pK1Vr6u3kooxFoYGB" || process.env.AUTH0_CLIENT_ID,
+            //     clientSecret:
+            //         "01ooJ8Y7ynAjHvuEujZhvk-2uDcN41lLnTvcfNtiISR1G9QtMWB7kGkPmjJ7Izen" ||
+            //         process.env.AUTH0_CLIENT_SECRET,
+            //     domain: "client-apps-dev.eu.auth0.com" || process.env.AUTH0_DOMAIN,
+            // }),
             // Providers.Credentials({}),
             // ...add more providers here
         ],
