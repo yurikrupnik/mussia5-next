@@ -38,9 +38,9 @@ import fetcher from "../../src/fetch";
 const logo = "";
 const logoBlack = "";
 const Login = () => {
-    const [session] = [{}];
+    // const [session] = [{}];
     // const [session] = useSession();
-    console.log("session", session); // eslint-disable-line
+    // console.log("session", session); // eslint-disable-line
     // console.log("loading", loading);
     const user = useUser();
     console.log("user", user); // eslint-disable-line
