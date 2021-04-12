@@ -1,7 +1,7 @@
 import React, { useCallback, useState } from "react";
 import { Formik, Form } from "formik";
 // import { useToggle } from "react-use";
-import { useSession, signin, signOut } from "next-auth/client";
+import { signin, signOut } from "next-auth/client";
 import Button from "@material-ui/core/Button";
 import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
@@ -40,10 +40,10 @@ const logoBlack = "";
 const Login = () => {
     const [session] = [{}];
     // const [session] = useSession();
-    console.log("session", session);
+    console.log("session", session); // eslint-disable-line
     // console.log("loading", loading);
     const user = useUser();
-    console.log("user", user);
+    console.log("user", user); // eslint-disable-line
     const { data, mutate } = useSWR("/api/users", fetcher);
     console.log("{ data, mutate }", { data, mutate }); // eslint-disable-line
     // const classes = loginStyles();

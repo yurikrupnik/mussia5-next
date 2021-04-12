@@ -5,7 +5,7 @@ import Container from "@material-ui/core/Container";
 import Typography from "@material-ui/core/Typography";
 import { NextPageContext } from "next";
 import axios from "axios";
-import Model from "../../models/User";
+// import Model from "../../models/User";
 
 interface Data {
     name: string;
