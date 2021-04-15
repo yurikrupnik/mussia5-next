@@ -6,6 +6,7 @@ const connection: Partial<{ isConnected: ConnectionStates }> = {};
 async function connectDb(req: NextApiRequest, res: NextApiResponse, next: () => void) {
     console.log("process.env.MONGODB_URIf", process.env.MONGODB_URI); // eslint-disable-line
     console.log("process.env.VERCEL_URL", process.env.VERCEL_URL); // eslint-disable-line
+    console.log("process.env.VERCEL_GIT_REPO_SLUG", process.env.VERCEL_GIT_REPO_SLUG); // eslint-disable-line
     if (connection.isConnected) {
         console.log("Using existing connection"); // eslint-disable-line
         return next();
