@@ -25,6 +25,7 @@ import { useRouter } from "next/router";
 // import TextField from "@/components/FormField"; // todo fix eslint
 import useSWR from "swr";
 import { useUser } from "@auth0/nextjs-auth0";
+import { NextPageContext } from "next";
 import TextField from "../../components/FormField";
 import fetcher from "../../src/fetch";
 // import { Context as Projects } from "../../api/projects/context";
@@ -216,5 +217,13 @@ const Login = () => {
         </Grid>
     );
 };
+
+export async function getServerSideProps(ctx: NextPageContext) {
+    console.log("process.env.VERCEL_URL", process.env.VERCEL_URL); // eslint-disable-line
+
+    return {
+        props: {},
+    };
+}
 
 export default Login;
