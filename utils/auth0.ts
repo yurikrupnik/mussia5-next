@@ -6,7 +6,7 @@ export default initAuth0({
     // // domain: "client-apps-dev.eu.auth0.com" || process.env.AUTH0_DOMAIN,
     secret: process.env.AUTH0_SECRET,
     issuerBaseURL: process.env.AUTH0_ISSUER_BASE_URL,
-    baseURL: process.env.VERCEL_URL,
+    // baseURL: process.env.VERCEL_URL,
     // // issuerBaseURL: "http://localhost:3000",;
     // session: {
     //     cookie: {
