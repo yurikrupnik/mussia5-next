@@ -67,7 +67,7 @@ const base = nc({ onError, onNoMatch })
 
 handler.get((req, res) => {
     res.statusCode = 200;
-    res.json({ name: "Arisss" });
+    res.json({ name: "shalom" });
 });
 
 handler.get("/a", base);
