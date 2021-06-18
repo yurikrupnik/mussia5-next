@@ -1,4 +1,4 @@
-FROM node:14 AS builder
+FROM node:16 AS builder
 ARG port=8080
 ENV PORT=$port
 
@@ -9,7 +9,7 @@ RUN npm run build
 RUN ls -a
 
 
-FROM node:12-alpine
+FROM node:16-alpine
 
 ARG port=8080
 ENV PORT=$port
