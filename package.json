@@ -21,7 +21,7 @@
         "express": "4.17.1",
         "express-session": "1.17.1",
         "faker": "5.5.3",
-        "formik": "2.2.6",
+        "formik": "2.2.9",
         "helmet": "4.6.0",
         "lodash": "4.17.21",
         "mongodb": "3.6.6",
