@@ -38,7 +38,7 @@ import fetcher from "../../src/fetch";
 
 const logo = "";
 const logoBlack = "";
-const Login = () => {
+function Login() {
     // const [session] = [{}];
     // const [session] = useSession();
     // console.log("session", session); // eslint-disable-line
@@ -77,7 +77,7 @@ const Login = () => {
             }).then(() => {
                 router.push("/dashboard");
             }),
-        []
+        [],
     );
 
     return (
@@ -216,7 +216,7 @@ const Login = () => {
             </Grid>
         </Grid>
     );
-};
+}
 
 export async function getServerSideProps() {
     console.log("process.env.VERCEL_URL", process.env.VERCEL_URL); // eslint-disable-line

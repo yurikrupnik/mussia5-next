@@ -27,9 +27,10 @@ function respondWithResult<T>(res: NextApiResponse) {
     };
 }
 
-const list = <T extends mongoose.Model<Document>>(Model: T) => (req: NextApiRequest, res: NextApiResponse) => {
-    Model.find(req.query).then(respondWithResult(res)).catch(handleError(res));
-};
+const list =    <T extends mongoose.Model<Document>>(Model: T) =>
+    (req: NextApiRequest, res: NextApiResponse) => {
+        Model.find(req.query).then(respondWithResult(res)).catch(handleError(res));
+    };
 
 // changed from express params to query - next way for dynamic routes
 const find = (Model: mongoose.Model<Document>) => (req: NextApiRequest, res: NextApiResponse) => {
@@ -51,7 +52,7 @@ const update = (Model: mongoose.Model<Document>) => (req: NextApiRequest, res: N
         {
             new: true,
             useFindAndModify: false,
-        }
+        },
     )
         .then(respondWithResult(res))
         .catch(handleError(res));

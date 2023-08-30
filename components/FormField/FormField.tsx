@@ -56,7 +56,7 @@ const FormField: React.FC<Props> = (props) => {
                 {item.name}
             </MenuItem>
         ),
-        []
+        [],
     );
 
     if (type === "select") {
