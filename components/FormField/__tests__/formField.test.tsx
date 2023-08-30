@@ -15,7 +15,7 @@ it(`should  component`, () => {
             <Form>
                 <FormField name="aris" fullWidth />
             </Form>
-        </Formik>
+        </Formik>,
     );
     // const rightClick = { button: 2 };
     // const button = getByTestId("confirm-button");
@@ -30,7 +30,7 @@ it(`should render select component`, () => {
             <Form>
                 <FormField name="aris" type="select" options={[{ _id: "a", name: "a" }]} fullWidth />
             </Form>
-        </Formik>
+        </Formik>,
     );
     // const rightClick = { button: 2 };
     // const button = getByTestId("confirm-button");

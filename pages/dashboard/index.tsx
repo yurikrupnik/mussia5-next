@@ -176,7 +176,7 @@ export async function getServerSideProps(ctx: NextPageContext) {
         .then(
             (users) =>
                 // console.log("users", users.data); // eslint-disable-line
-                users.data
+                users.data,
         )
         .catch((err) => {
             console.log("err", err); // eslint-disable-line
