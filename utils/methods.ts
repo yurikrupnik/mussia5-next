@@ -27,7 +27,8 @@ function respondWithResult<T>(res: NextApiResponse) {
     };
 }
 
-const list =    <T extends mongoose.Model<Document>>(Model: T) =>
+const list =
+    <T extends mongoose.Model<Document>>(Model: T) =>
     (req: NextApiRequest, res: NextApiResponse) => {
         Model.find(req.query).then(respondWithResult(res)).catch(handleError(res));
     };
